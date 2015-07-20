@@ -1,0 +1,9 @@
+<div class="pto-toolbox-selector  btn-group-vertical btn-block" role="group">
+  <a href=""
+     ng-repeat="tool in toolbox"
+     class="btn btn-default toolitem"
+     ng-class="{'active': isToolActive(tool)}"
+     ng-click="toggleToolCategory(tool)">{{tool.name}}
+     </a>
+</div>
+

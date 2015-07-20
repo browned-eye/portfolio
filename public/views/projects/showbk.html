@@ -1,0 +1,62 @@
+<pto-main-nav></pto-main-nav>
+<div class="container">
+<!-- project info -->
+  <div class="row showtitle">{{project.title}}</div>
+  <div class="row showtagline">{{project.tagline}}</div>
+  <!-- break grid smaller into a block of 3 and 6 -->
+  <div class="row">
+   <div class= "col-sm-3 projectThumbImgShow">
+        <div back-img="images/projectpics/{{project.title_short}}/{{project.thumb}}"></div>
+    </div>
+    <div class= "col-sm-3 projShowCard">
+      <div class="row projShowItem" ng-show="project.place"> <b>CLIENT</b>: {{project.place}} </div>
+      <div class="row projShowItem" ng-show="project.proj_date"> <b>DATE</b>: {{project.proj_date}} </div>
+      <div class="row projShowItem" ng-show="project.team"> <b>TEAM</b>: {{project.team}} </div>
+      <div class="row projShowItem" ng-show="project.role_str"> <b>ROLE</b>: {{project.role}} </div>
+    </div>
+    <div class= "col-sm-3 projShowCard">
+      <div class="row projShowItem" ng-show="project.skills_str"> <b>SKILLS</b>: {{project.skills_str}} </div>
+    </div>
+    <div class= "col-sm-3 projShowCard">
+      <div class="row projShowItem" ng-show="project.tools"><b>TOOLS</b>: {{project.tools}} </div>
+    </div>
+  </div>
+  <div class="row showDescrip">
+    {{project.description}}
+  </div>
+  <!-- gallery view -->
+  <div class="row projShowThumbsRoll">
+    <ul >
+    <!--Iterate through all images and display them end to end as thumbs -->
+      <li ng-repeat="image in galleryData">
+        <div class="thumbwrapper"  ng-class="{'record-highlight': $index == focusIndex }">
+        <!--    Note ng-click here calls the scrollTo function found in the
+        controller and passes it its index. This is used to scroll
+        the large image to the correct image -->
+        <a ng-href="" ng-click="scrollTo(image,$index)" title="This is sooo rad I can't believe that this works" data-toggle="tooltip" data-placement="top" tooltip>
+          <img class="thumbpic" ng-src="{{IMAGE_LOCATION+image.image}}" ng-class="{'image-highlight': $index == focusIndex }"/>
+        </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+    <!--    Layout the large images horizontally using viewwindow
+    to hide the overflow (all but the current image). -->
+    <div class="row mainimageshell">
+      <div class="viewwindow">
+        <ul class="fullscroller" class="fullsizelist" ng-style="listposition" >
+          <!--    Iterate through all images and display them end to end -->
+          <li ng-repeat="image in galleryData">
+            <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+image.image}}" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Display the description of the current image -->
+    <div class="caption">
+      <div class="captionhead">{{selected.header}}</div>
+      {{selected.desc}}
+    </div>
+  </div>
+</div>
+

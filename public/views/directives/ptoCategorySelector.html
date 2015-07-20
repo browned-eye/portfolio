@@ -1,0 +1,11 @@
+<div class="pto-category-selector btn-group-vertical btn-block" role="group">
+  <a href=""
+     ng-repeat="category in categories"
+     class="btn btn-default toolitem"
+     ng-class="{'active': isActive(category)}"
+     ng-click="toggleCategory(category)">{{category.name}}</a>
+</div>
+
+
+
+
