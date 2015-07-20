@@ -2,5 +2,7 @@
 *.swp
 *~
 node_modules
-
-/public/library
+public/lib
+public/images
+node_modules
+vendor
