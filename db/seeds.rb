@@ -6,14 +6,14 @@ require 'smarter_csv'
 #require 'csv'
 
 ProjectType.delete_all
-ProjectType.create(name: "All Categories",  tag: 'all')
-ProjectType.create(name: "Tangible UI",  tag: 'tui')
-ProjectType.create(name: "Natural Language Processing",  tag: 'nlp')
-ProjectType.create(name: "Information Vizualization",  tag: 'info_viz')
-ProjectType.create(name: "Web Development",  tag: 'web_dev')
-ProjectType.create(name: "Databases and Devops",  tag: 'dbs')
-ProjectType.create(name: "Writing Samples",  tag: 'writing')
-ProjectType.create(name: "UX Research",  tag: 'ux_research')
+ProjectType.create(name: "all categories",  tag: 'all')
+ProjectType.create(name: "tangible ui",  tag: 'tui')
+ProjectType.create(name: "natural language processing",  tag: 'nlp')
+ProjectType.create(name: "information vizualization",  tag: 'info_viz')
+ProjectType.create(name: "web development",  tag: 'web_dev')
+ProjectType.create(name: "databases and devops",  tag: 'dbs')
+ProjectType.create(name: "writing samples",  tag: 'writing')
+ProjectType.create(name: "ux research",  tag: 'ux_research')
 
 
 
@@ -24,7 +24,7 @@ Toolbox.create( name:"ajax")
 Toolbox.create( name:"css/html")
 Toolbox.create( name:"ruby on rails")
 Toolbox.create( name: "python" )
-Toolbox.create( name:" arduino")
+Toolbox.create( name:"arduino")
 Toolbox.create( name:"d3")
 Toolbox.create( name:"amazon ec2")
 Toolbox.create( name:"shell scripting")
@@ -44,17 +44,19 @@ Project.where(:title_short => "whirld").update_all( tags: ['ux_research', 'web_d
 
 Project.where(:title_short => "meeglo").update_all( tags: ['ux_research', 'web_dev', 'tui'], toolbox_ids: ["arduino", "sinatra", "ajax", "html/css", "javascript", "mongodb"], skills:["Contextual Interviewing, Rapid Iterative Testing Evaluation,  Affinity Diagramming, Prototyping"], role:['user research, product design, web development, branding, device prototyping'])
 
-Project.where(:title_short => "archextract").update_all( tags: ['nlp', 'web_dev', 'dbs'], toolbox_ids: ["mysql", "ruby on rails", "ajax", "html/css" "javascript", "python", "map reduce"], skills:["contextual interviewing, dev ops, product design, web development"])
+Project.where(:title_short => "archextract").update_all( tags: ['nlp', 'web_dev', 'dbs'], toolbox_ids: ["mysql", "ruby on rails", "ajax", "html/css", "javascript", "python", "map reduce", "shell scripting"], skills:["contextual interviewing, comparative analysis, dev ops, automation, product design, web development"])
 
 Project.where(:title_short => "trains").update_all( tags: ['info_viz'], toolbox_ids: ["mysql", "python"], skills:["spacial data analysis"])
 
-Project.where(:title_short => "sfgraffitti").update_all( tags: ['info_viz'], toolbox_ids: ["tablau"], skills:["data analysis"])
+Project.where(:title_short => "sfgraffitti").update_all( tags: ['info_viz'], toolbox_ids: ["tablau"], skills:["data analysis", "data visualization"])
 
-Project.where(:title_short => "india").update_all(tags: ["info_viz",  "web_dev"],  toolbox_ids: ["d3, html/css"], skills:["data analysis, data visualization"])
+Project.where(:title_short => "india").update_all(tags: ["info_viz",  "web_dev"],  toolbox_ids: ["d3", "html/css", "javascript", "tablau"], skills:["data analysis", "data visualization", "user testing"], role:['exploratory data analysis', 'creation of d3 and highcharts visualizations', 'user testing'])
 
 Project.where(:title_short => "tubestrends").update_all(tags: ["dbs"],  toolbox_ids: ["mongo db", "mysql", "amazon ec2", "shell scripting", "python"], skills:["automation engineering, server admininstration, ETL pipline creation, data management"])
 
 Project.where(:title_short => "caceo").update_all( tags: ["web_dev"],  toolbox_ids: ["ruby on rails", "ajax", "css/html", "mysql"], skills:["contextual interviewing, dev ops, product design, web development"])
+
+Project.where(:title_short => "fractalviewer").update_all( tags: ["tui"],  toolbox_ids: ["arduino", "processing", "java"], skills:["prototyping, tangible ui design"])
 
 
 

@@ -3,15 +3,15 @@
 -->
 <!-- this section will only show up on the home page -->
 <div id="scroller" sscroll-spy="" data-target="#scrolly" data-scroll-offset="70">
-   <div id="home">
-    <div class="row homehead" ng-if="home">
+  <div id="home">
+    <div class="row homehead">
       <div class="col-sm-3 landingImg"></div>
       <div class="col-sm-9 landingText">
         <div class="landingHead"> Hi. I'm <span style="color:#7B2932">Janine Heiser</span>, a <span style="color:#0084B3">full stack developer</span>  and <span style="color:#E08C50"> data analyst </span> with an interest in <span style="color:#3D745B">interaction design. </div>
       </div>
     </div>
   </div>
-  <div id="projects" class="row" ng-if="home"><hr></div>
+  <div id="projects" class="row"><hr></div>
   <!-- this section will only show up on the home page -->
   <div class="row projectsrow projectTop">
     <div class="col-sm-3 projcats">
@@ -21,16 +21,16 @@
         <pto-toolbox-selector ng-model="search.tool"></pto-toolbox-selector>
       </div>
     <div class="col-sm-9 projectsdisp">
-      <div ng-repeat="project in projects | categoryFilter:search.category | toolFilter:search.tool  | categoryFilter:stuff track by $index" ng-if="$index % 3 == 0" class="row projectsrow">
+      <div ng-repeat="project in myprojects = ( projects  | categoryFilter:search.category | toolFilter:search.tool  | categoryFilter:stuff) track by $index" ng-if="$index % 3 == 0" class="row projectsrow">
       <!-- first item -->
         <div class="col-xs-4 projectcard">
-          <a class="projectLink" href="#/projects/{{projects[$index].id}}">
+          <a class="projectLink" href="#/projects/{{myprojects[$index].id}}">
             <div class="projectThumbImg">
-            <div back-img="images/projectpics/{{projects[$index].title_short}}/{{projects[$index].thumb}}" hideonhoverparent></div>
+            <div back-img="images/projectpics/{{myprojects[$index].title_short}}/{{myprojects[$index].thumb}}" hideonhoverparent></div>
               <div class="projectTagline" showonhoverparent>
                 <div class="projectTaglineContainer">
-                  <div class="projectTaglineHead"> {{projects[$index].title}}</div>
-                  <div class="projectTaglineText"> {{projects[$index].tagline}}</div>
+                  <div class="projectTaglineHead"> {{myprojects[$index].title}}</div>
+                  <div class="projectTaglineText"> {{myprojects[$index].tagline}}</div>
                 </div>
               </div>
             </div>
@@ -40,11 +40,11 @@
         <div class="col-xs-4 projectcard">
           <a class="projectLink" href="#/projects/{{projects[$index+1].id}}">
             <div class="projectThumbImg">
-              <div hideonhoverparent back-img="images/projectpics/{{projects[$index+1].title_short}}/{{projects[$index+1].thumb}}"></div>
+              <div hideonhoverparent back-img="images/projectpics/{{myprojects[$index+1].title_short}}/{{myprojects[$index+1].thumb}}"></div>
               <div class="projectTagline" showonhoverparent>
                 <div class="projectTaglineContainer">
-                  <div class="projectTaglineHead"> {{projects[$index + 1].title}}</div>
-                  <div class="projectTaglineText"> {{projects[$index + 1].tagline}}</div>
+                  <div class="projectTaglineHead"> {{myprojects[$index + 1].title}}</div>
+                  <div class="projectTaglineText"> {{myprojects[$index + 1].tagline}}</div>
                 </div>
               </div>
             </div>
@@ -54,11 +54,11 @@
         <div class="col-xs-4 projectcard">
           <a class="projectLink" href="#/projects/{{projects[$index+2].id}}">
             <div class="projectThumbImg">
-              <div back-img="images/projectpics/{{projects[$index+2].title_short}}/{{projects[$index+2].thumb}}" hideonhoverparent></div>
+              <div back-img="images/projectpics/{{myprojects[$index+2].title_short}}/{{myprojects[$index+2].thumb}}" hideonhoverparent></div>
               <div class="projectTagline" showonhoverparent>
                 <div class="projectTaglineContainer">
-                  <div class="projectTaglineHead"> {{projects[$index + 2].title}}</div>
-                  <div class="projectTaglineText"> {{projects[$index + 2].tagline}}</div>
+                  <div class="projectTaglineHead"> {{myprojects[$index + 2].title}}</div>
+                  <div class="projectTaglineText"> {{myprojects[$index + 2].tagline}}</div>
                 </div>
               </div>
             </div>
@@ -68,12 +68,12 @@
     </div>
   </div>
   <!--************EXPERIENCE SECTION***************************-->
-  <div id="experience" class="row" ng-if="home"><hr></div>
+  <div id="experience" class="row"><hr></div>
   <div class="row resumeFull"> <a href="/images/janineheiser_resume.pdf" download="janineheiser_resume">Download Full Resume</a></div>
   <div class="row resumeHead">PROFESSIONAL EXPERIENCE</div>
   <div class="myjobs">
   <!-- first job -->
-    <div class="row resumeJobHead"><a ng-click="isCollapsed = !isCollapsed">WEB DEVELOPER</a>, Bancroft Library, Summer 2014, UC Berkeley </div>
+    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed = !isCollapsed" >WEB DEVELOPER, Bancroft Library, Summer 2014, UC Berkeley</a> </div>
     <div class="resumeJobItemContainer" collapse="isCollapsed">
       <div class="row resumeJobItem">
           + Created a fully functional, Ruby on Rails web application that utilized a variety of existing natural
@@ -84,7 +84,7 @@
       </div>
     </div>
     <!-- second job -->
-    <div class="row resumeJobHead"><a ng-click="isCollapsed2 = !isCollapsed2">SYSTEMS ADMINISTRATOR</a>, July 2013-December 2014, UC Berkeley School of Law, Statewide Database Project </div>
+    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed2 = !isCollapsed2">SYSTEMS ADMINISTRATOR, July 2013-December 2014, UC Berkeley School of Law, Statewide Database Project </a></div>
     <div class="resumeJobItemContainer" collapse="isCollapsed2">
       <div class="row resumeJobItem">
          + Administered the Statewide Database's web servers; tasks included administering dev/QA/production websites, database
@@ -96,7 +96,7 @@
       </div>
     </div>
     <!-- third job -->
-    <div class="row resumeJobHead"><a ng-click="isCollapsed3 = !isCollapsed3">QUALITY ASSURANCE ENGINEER</a>, December 2012-September 2013, INgrooves Fontana, San Francisco, CA </div>
+    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed3 = !isCollapsed3">QUALITY ASSURANCE ENGINEER, December 2012-September 2013, INgrooves Fontana, San Francisco, CA </a></div>
     <div class="resumeJobItemContainer" collapse="isCollapsed3">
       <div class="row resumeJobItem">
          + Created and implemented automated testing software written python to test new accounting software features and
@@ -108,7 +108,7 @@
       </div>
     </div>
     <!--fourth job -->
-    <div class="row resumeJobHead"><a ng-click="isCollapsed4 = !isCollapsed4">DATA ANALYST</a>, August 2007-November 2012, Democratic National Committee, Technology Department, National Voter Database Project, Washington, DC and San Francisco, CA </div>
+    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed4 = !isCollapsed4">DATA ANALYST, August 2007-November 2012, Democratic National Committee, Technology Department, National Voter Database Project, Washington, DC and San Francisco, CA </a></div>
     <div class="resumeJobItemContainer" collapse="isCollapsed4">
       <div class="row resumeJobItem">
          + Helped develop and maintain the data infrastructure and provided quality assurance for the Democratic Party’s online voter data management tool, Voter Activation Network (VAN), used by the Obama For America Campaign, and democratic candidates to organize and mobilize voters. (http://www.ngpvan.com/smartvan)
@@ -124,24 +124,65 @@
   <div class="row extraSkillz">
     <div class="col-xs-6">
       <div class="row resumeItemsHead">TECHNICAL SKILLS </div>
-      <div class="row resumeitems">PROGRAMMING: python, ruby, java, bash scripting</div>
-      <div class="row resumeitems">WEB: rails, HTML/CSS, jQuery, ajax, node.js, php, sinatra, flask, nginx and apache webserver administration</div>
-      <div class="row resumeitems">DBMS: highly skilled in database design, administration and query optimization; familiarity with mapreduce concepts and nosql dbs like mongodb and sparkdb</div>
-      <div class="row resumeitems">DATA ANALYSIS AND VISUALIZATION: d3, highcharts, tableau, scipy, pandas, R </div>
+      <div class="row resumeitems"><div>PROGRAMMING</div><div class="resumeskillsContainer">python, ruby, java, bash scripting</div></a></div>
+      <div class="row resumeitems"><div>WEB</div><div class="resumeskillsContainer"> ruby on rails, HTML/CSS, jQuery, ajax, node.js, php, sinatra, flask, nginx and apache webserver administration</div></a></div>
+      <div class="row resumeitems"><div>DBMS</div><div class="resumeskillsContainer"> highly skilled in database design, administration and query optimization; familiarity with mapreduce concepts and nosql dbs like mongodb and sparkdb</div></a></div>
+      <div class="row resumeitems"><div>DATA ANALYSIS AND VISUALIZATION</div><div class="resumeskillsContainer"> d3, highcharts, tableau, scipy, pandas, R </div></a></div>
     </div>
     <div class="col-xs-6">
       <div class="row resumeItemsHead">EDUCATION </div>
-      <div class="row resumeitems">UC BERKELEY, Berkeley, CA, Masters in Information Management and Systems, May 2015 </div>
-      <div class="row resumeitemsplus"><span style="padding-right:1%">+</span> Focus areas: user-centered interaction design, web development, data analysis, information visualization and organization</div>
+      <div class="row resumeitems">UC BERKELEY, Berkeley, CA, Masters in Information Management and Systems, May 2015</div>
+          <div class="row resumeitemsplus"><span style="padding-right:1%">+</span> Focus areas: user-centered interaction design, web development, data analysis, information visualization and organization</div>
+        </div>
       <div class="row resumeitems">OBERLIN COLLEGE, Oberlin, OH, BA with high honors</div>
     </div>
   </div>
 
 
   <!--************ABOUT SECTION***************************-->
-  <div id="about" class="row" ng-if="home"><hr></div>
-    <h1> About </h1>
-    <img src="images/me.jpg">
-  <div id="contact" class="row" ng-if="home"><hr></div>
-    <h1> Contact me </h1>
+  <div id="about" class="row"><hr></div>
+  <div class="row meAboutHead"> ABOUT </div>
+  <div class="row meAboutContainer">
+    <div class="meAbout col-xs-6">
+      <div back-img="images/me.jpg"></div>
+    </div>
+    <div class="meAboutText col-xs-6">
+      Originally a self-taught programmer, I had the opportunity to go back to school at the UC Berkeley School of Information to learn best practices for data management and product usability.
+      My work and educational experiences have taught me that good information organization complements user experience design.
+      I'm seeking to work in collaborative work environment; I love to share ideas, learn from others and be part of a team.
+      </br></br>
+      I also like to hike, travel, and go swimming.
+    </div>
+  </div>
+
+  <!--************CONTACT SECTION***************************-->
+  <div id="contact" class="row"><hr></div>
+  <div class="row meAboutHead">HIRE ME</div>
+  <div class="row contactpitch">
+    I'm currently looking for a full time position in SF Bay Area.
+  </div>
+  <div class="row contactpitchtext">
+      Think I might be a good fit for your team?  You should totally hire me.  Shoot me an email to set up a chat!
+  </div>
+  <div class="row contactcontainer">
+    <div class="col-xs-6 contactItemContainer">
+      <div ng-repeat="item in contactItems">
+        <div class="row contactitem">
+          <div class="col-xs-3 contactThumb">
+            <a href="{{item.link}}"><div back-img="images/{{item.thumbimage}}"></div></a>
+          </div>
+          <a class="contactlink col-xs-3" href="{{item.link}}"> {{item.name}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="meAbout col-xs-6">
+      <div back-img="images/meandchichi.jpg"></div>
+    </div>
+  </div>
+
+
+<!-- ******footer section -->
+  <div class="footer row"><hr></div>
+  <div  class="row text-muted">Copyright © Janine Heiser 2015</div>
 </div>
+

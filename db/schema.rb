@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150710030554) do
+ActiveRecord::Schema.define(version: 20150725023700) do
 
   create_table "project_types", force: :cascade do |t|
     t.string "name", limit: 255
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20150710030554) do
     t.string  "tagline",     limit: 255
     t.text    "description", limit: 65535
     t.string  "github",      limit: 255
+    t.string  "website",     limit: 255
+    t.string  "report",      limit: 255
   end
 
   create_table "toolboxes", force: :cascade do |t|

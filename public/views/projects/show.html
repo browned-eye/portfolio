@@ -1,4 +1,4 @@
-<pto-main-nav></pto-main-nav>
+<pto-main-nav2></pto-main-nav2>
 <div class="container">
 <!-- project info -->
   <div class="row showtitle">{{project.title}}</div>
@@ -12,13 +12,14 @@
       <div class="row projShowItem" ng-show="project.place"> <b>CLIENT</b>: {{project.place}} </div>
       <div class="row projShowItem" ng-show="project.proj_date"> <b>DATE</b>: {{project.proj_date}} </div>
       <div class="row projShowItem" ng-show="project.team"> <b>TEAM</b>: {{project.team}} </div>
-      <div class="row projShowItem" ng-show="project.role_str"> <b>ROLE</b>: {{project.role}} </div>
-    </div>
+     </div>
     <div class= "col-sm-3 projShowCard">
-      <div class="row projShowItem" ng-show="project.skills_str"> <b>SKILLS</b>: {{project.skills_str}} </div>
+       <div class="row projShowItem" ng-show="project.skills_str"> <b>SKILLS</b>: {{project.skills_str}} </div>
+        <div class="row projShowItem" ng-show="project.role_str"> <b>ROLE</b>: {{project.role_str}} </div>
     </div>
     <div class= "col-sm-3 projShowCard">
       <div class="row projShowItem" ng-show="project.tools"><b>TOOLS</b>: {{project.tools}} </div>
+      <div class="row projShowItem"><b>PROJECT LINKS</b><a ng-show="project.github" href="{{project.github}}"><br>link to github repo</a><a ng-show="project.website" href="{{project.website}}"><br> link to full website</a><a ng-show="project.report" href="{{project.report}}"><br>link to report</a></div>
     </div>
   </div>
   <div class="row showDescrip">
@@ -34,7 +35,7 @@
             <!--    Note ng-click here calls the scrollTo function found in the
             controller and passes it its index. This is used to scroll
             the large image to the correct image -->
-            <a ng-href="" ng-click="scrollTo(image,$index)" title="This is sooo rad I can't believe that this works" data-toggle="tooltip" data-placement="top" tooltip>
+            <a ng-href="" ng-click="scrollTo(image,$index)">
               <img class="thumbpic" ng-src="{{IMAGE_LOCATION+image.image}}" ng-class="{'image-highlight': $index == focusIndex }"/>
             </a>
           </div>
@@ -50,7 +51,14 @@
       <ul class="fullsizelist" ng-style="listposition" >
         <!--    Iterate through all images and display them end to end -->
         <li ng-repeat="image in galleryData">
-          <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+image.image}}" />
+          <div ng-if="image.type == 'image'">
+            <div id="fullsize" class="large">
+              <div back-img-big="{{IMAGE_LOCATION+image.image}}"></div>
+            </div>
+          </div>
+          <div ng-if="image.type == 'video'">
+            <youtube-video video-id="image.video" player-width="'650px'" player-height="'450px'" player="galleryPlayer"></youtube-video>
+          </div>
         </li>
       </ul>
     </div>
@@ -58,12 +66,14 @@
   <!-- Display the description of the current image -->
   <div class="caption">
     <div class="captionhead">{{selected.header}}</div>
-      {{selected.desc}}
+      <div ng-bind-html="selected.desc"></div>
     </div>
     <div style="clear:both;"></div>
     <!--    Layout the large images horizontally using viewwindow to hide the overflow (all but the current image). -->
   </div>
 </div>
+ <div class="footer row"><hr></div>
+  <div  class="row text-muted">Copyright © Janine Heiser 2015</div>
 </div>
 
 <!-- </div> -->

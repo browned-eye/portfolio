@@ -15,6 +15,7 @@ ul {
   /*white-space: nowrap;*/
 }
 
+
 /*****************nav bar styles*************************/
 .hireme {
   color: #7B2932;
@@ -28,6 +29,7 @@ ul {
 }
 
 
+
 /******************project index page styles*************************/
 /***general project styles***/
 .projectsrow {
@@ -39,7 +41,7 @@ ul {
  color: #615652;
 }
 #home{
-  padding-top:5.5%;
+  padding-top:7%;
 }
 
 .landingImg{
@@ -84,6 +86,7 @@ hr {
 .filtercathead {
   font-size: 150%;
   font-weight: bold;
+  padding-bottom:1%;
 }
 .projcats {
   padding-bottom: 1000px;
@@ -104,18 +107,14 @@ a.toolitem {
 }
 
 .projectcard {
-  padding-top: 1%;
-  padding-bottom: 1.5%;
-  overflow: hidden;
   float: left;
 }
 
 .projectThumbImg {
   height: 200px;
-  width: 250px;
+  width: 225px;
   opacity: 0.7;
   filter: alpha(opacity=70);
-  margin-bottom: 2%;
   position: relative;
 }
 /*back-img will inherit the height and width whatever div its inside*/
@@ -124,6 +123,9 @@ div[back-img] {
   width: 90%;
   height: 90%;
 }
+
+
+
 
 .projectThumbImg:hover {
   opacity: 1.0;
@@ -142,7 +144,7 @@ a.projectLink {
 .projectTagline {
    position: relative;
    display:none;
-   margin:3%;
+  /* margin:3%;*/
   opacity: 0.4;
   height:90%;
   width:90%;
@@ -176,8 +178,8 @@ a.projectLink {
 .showtitle{
   font-size:270%;
   padding-bottom:0%;
-  margin-top:0.25%;
-  color:#3D745B;
+  margin-top:1%;
+  /*color:#3D745B;*/
 }
 
 .showtagline{
@@ -233,6 +235,7 @@ div.record-highlight {
 .thumbpic {
   height: 78px;
    margin:2%;
+   width:125px;
 }
 
 .image-highlight{
@@ -247,21 +250,27 @@ opacity: 0.2;
 }*/
 
 /*main image div*/
+div[back-img-big] {
+  width: 100%;
+  height: 100%;
+}
+
 .large {
   width: 650px;
   height:450px;
 }
 .mainimageshell {
   float: left;
-  display:block;
+ /* display:block;*/
   width: 670px;
-  padding: 0px;
-  padding-bottom:4%;
+/*  padding: 0px;
+  padding-bottom:4%;*/
 }
 .viewwindow {
   width: 650px;
   height: 450px;
   overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
 }
 .fullsizelist {
@@ -276,63 +285,64 @@ opacity: 0.2;
 }
 
 .captionhead {
-  font-size: 120%;
+  font-size: 140%;
+  padding-bottom:1.5%;
 }
 .caption {
-  margin-top: 2%;
   width: 100%;
   padding-right:3%;
   padding-left:3%;
  /* height: 424px;*/
  height:100%;
   display:block;
-  font-size:115%;
+  font-size:125%;
+
 }
 /******************experience page styles*************************/
-
+#experience{
+}
 .resumeHead{
   font-size:250%;
 }
 
 .resumeFull{
-  margin-top:1%;
+  padding-top:3%;
   margin-bottom:1%;
   font-size:80%;
 }
 
 .myjobs{
-  margin-top:2%;
+  margin-top:0%;
   margin-right:2%;
 }
 
-.resumeJobHead{
-  font-size:160%;
-  padding-bottom:1.75%;
-}
 
 .resumeJobItemContainer{
   padding-bottom:1.75%;
 }
 
 .resumeJobItem{
-  font-size:120%;
+  font-size:135%;
   margin:0.25%;
   padding-left:2%;
   display:block;
-  margin-right:4%;
+  padding-right:10%;
+  text-align: justify;
 }
 
 
 .resumeItemsHead{
   font-size:180%;
   padding-bottom:1%;
+  text-align: justify;
 }
 
 .resumeitems{
-  font-size:130%;
+  font-size:135%;
   padding-bottom:3.5%;
   display:block;
   margin-right:4%;
+  padding-right:8%;
 }
 .resumeitemsplus{
   font-size:130%;
@@ -345,12 +355,111 @@ opacity: 0.2;
 }
 
 .extraSkillz{
-  padding-top:0%;
+  padding-bottom:5%;
+  padding-top:2%;
 }
 
 .itemResumeHead{
   font-size:140%;
+  text-align: justify;
 }
 
 
-/*http://stackoverflow.com/questions/16923111/change-class-on-mouseover-in-directive*/
+.resumeJobHead{
+  font-size:160%;
+  padding-bottom:1.75%;
+ padding-top:2%;
+  display:block;
+ padding-right:10%;
+ text-align: justify;
+}
+
+
+a.resumeclick:focus{
+  color:white;
+  background-color: #615652;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+   /*padding:1%;*/
+}
+a.resumeclick:active{
+  color:white;
+  background-color: #615652;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+   /*padding:1%;*/
+}
+
+.resumeitemsContainer{
+  padding-top:1%;
+  padding-bottom:1%;
+}
+/****************About section*********/
+.meAboutHead{
+  font-size:250%;
+  padding-top:2%;
+}
+
+.meAbout{
+  width:440px;
+  height:540px;
+  margin-top:-4%;
+  margin-left:-1.75%;
+/*  padding-left:5%;*/
+ /* margin-bottom:-6%;*/
+}
+
+.meAboutText{
+  padding-top:7%;
+  font-size:170%;
+  margin-right:-2%;
+  margin-left:-1%;
+  display:block;
+}
+.meAboutContainer{
+/*  margin-bottom:20%;*/
+ padding-bottom:5%;
+}
+
+/*********Contact Section*******/
+.contactpitch{
+  font-size:180%;
+  padding-top:2%;
+  padding-bottom:1%;
+}
+
+.contactpitchtext{
+  font-size:180%;
+}
+.contactcontainer{
+  font-size:180%;
+  padding-top:1%;
+  padding-bottom:3%;
+}
+
+.contactItemContainer{
+  /*padding-left:8%;*/
+  padding-top:3%;
+  padding-right:-10%;
+
+}
+.contactitem{
+}
+.contactThumb{
+  width:80px;
+  height:80px;
+}
+
+.contactlink{
+  margin-top:7%;
+  margin-left:-3%;
+}
+
+
+.footer{
+  padding-top:5%;
+}
+
+.text-muted{
+  padding-bottom:2%;
+}

@@ -23,7 +23,7 @@ class Portfolio < Sinatra::Application
     unless @project.description.nil?
       @project.description = @project.description.gsub("'", '')
     end
-    @project.to_json(:methods => [:tools, :skills_str ] )
+    @project.to_json(:methods => [:tools, :skills_str , :role_str] )
   end
 
   get '/projectCategories' do

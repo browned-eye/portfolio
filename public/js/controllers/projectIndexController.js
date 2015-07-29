@@ -1,5 +1,5 @@
 angular.module('portfolio')
-    .controller('ProjectIndexController', ['$scope', '$location', 'Project', function($scope, $location, Project) {
+    .controller('ProjectIndexController', ['$scope', '$location', '$anchorScroll', '$routeParams', 'Project', function($scope, $location,$anchorScroll, $routeParams, Project) {
 
         $scope.home = false;
         //get the project types
@@ -10,6 +10,30 @@ angular.module('portfolio')
         //console.log(searchObject);
         /// filter the projects based on a search
         $scope.search = {};
+        $scope.isCollapsed = true;
+        $scope.isCollapsed2 = true;
+        $scope.isCollapsed3 = true;
+        $scope.isCollapsed4 = true;
+        $scope.isCollapsed5 = true;
+        $scope.isCollapsed6 = true;
+        $scope.isCollapsed7 = true;
+        $scope.isCollapsed8 = true;
+        $scope.isCollapsed9 = true;
+
+        $scope.contactItems = [{
+            "name": 'janine.heiser@gmail.com',
+            "link": 'mailto:janine.heiser@gmail.com',
+            "thumbimage": 'email.png'
+        }, {
+            "name": 'Github',
+            "link": 'http://github.com/j9recurses',
+            "thumbimage": 'github2.png'
+        }, {
+            "name": 'LinkedIn',
+            "link": 'http://www.linkedin.com/in/janineheiser',
+            "thumbimage": 'linkedin.png'
+        }];
+
 
         //use these functions to return whether or not the div is hovered
         // $scope.hoverIn = function() {

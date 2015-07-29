@@ -1,7 +1,7 @@
 //http://rabidgadfly.com/page/2/
 
 angular.module('portfolio')
-    .controller('ProjectShowController', ['$scope', '$routeParams', 'Project', 'DataSource', function($scope, $routeParams, Project, DataSource) {
+    .controller('ProjectShowController', ['$scope', '$routeParams', '$anchorScroll','Project', 'DataSource', function($scope, $routeParams, $anchorScroll, Project, DataSource) {
         //$scope.project = Project.get({ id: $routeParams.id});
 
 
@@ -9,8 +9,9 @@ angular.module('portfolio')
             id: $routeParams.id
         }, function(data) {
             $scope.title_short = data.title_short;
+            $scope.IMAGE_LOCATION = "images/projectpics/" + data.title_short + "/";
             // Retrieve and set data
-            DataSource.get("data/" + $scope.title_short + ".json", function(data) {
+            DataSource.get("images/projectpics/"+$scope.title_short +"/" + $scope.title_short + ".json", function(data) {
                 $scope.galleryData = data;
                 $scope.selected = data[0];
                 $scope.glen = data.length;
@@ -25,8 +26,8 @@ angular.module('portfolio')
             });
 
         });
+        $scope.vidPlayer = "galleryPlayer";
         var IMAGE_WIDTH = 650;
-        $scope.IMAGE_LOCATION = "http://rabidgadfly.com/assets/angular/gallery1/";
 
         // Scroll to appropriate position based on image index and width
         $scope.scrollTo = function(image, ind) {
@@ -36,8 +37,8 @@ angular.module('portfolio')
             $scope.selected = image;
             //update the highlighted item in the image scroller ul
             $scope.focusIndex = ind;
-             console.log(IMAGE_WIDTH);
-             console.log(IMAGE_WIDTH * ind * -1);
+            console.log(IMAGE_WIDTH);
+            console.log(IMAGE_WIDTH * ind * -1);
         };
 
 
@@ -45,6 +46,7 @@ angular.module('portfolio')
 
         //http://plnkr.co/edit/rwUDTtkQkaQ0dkIFflcy?p=preview
         $scope.focusIndex = 0;
+
 
         $scope.keys = [];
         $scope.keys.push({
@@ -64,8 +66,8 @@ angular.module('portfolio')
         $scope.keys.push({
             code: 39,
             action: function() {
-              // console.log("right key pressed");
-              // console.log($scope.focusIndex);
+                // console.log("right key pressed");
+                // console.log($scope.focusIndex);
 
                 var IMAGE_WIDTH = 650;
                 // console.log($scope.focusIndex);
@@ -74,7 +76,7 @@ angular.module('portfolio')
                 //     $scope.focusIndex = 1;
                 // }
                 // console.log($scope.focusIndex);
-                if ($scope.focusIndex < ($scope.galleryData.length-1)) {
+                if ($scope.focusIndex < ($scope.galleryData.length - 1)) {
                     $scope.focusIndex++;
                     // if ($scope.focusIndex == 0) {
                     //     console.log("in here");
@@ -98,9 +100,10 @@ angular.module('portfolio')
                 }
                 o.action();
                 $scope.$apply();
-
             });
         });
+
+
 
 
     }]);
