@@ -77,7 +77,15 @@
          "image":"userprofile.png",
           "type": "image",
           "header":"User Profiles to Facilitate Collaboration and Community",
-          "desc":""
+          "desc":"Projects are linked to a set of collaborators. Each collaborator has profile page.<br><br>The profile page shows the user most recent activity, such as the photos they’ve contributed to, as well as their most commented and whirld projects.<br><br> User profiles also help users connect with one another. The user profile helps other users see what kind of projects a person is interested in, shows how active the person is on whirld, and shows the types of information he or she is contributing. "
+    },
+    {
+        "image":"hellowhirld.png",
+        "type": "image",
+        "header": "Reflection",
+        "image": "hellowhirld.png",
+        "desc": "When we started the project, we were excited about the challenge of working with drones: a new, changing technology, and with the possibilities of designing for complex image data.<br><br>  As we all know, a picture is worth a thousand words. But what about a drone that can take a thousand pictures?<br><br> Drones seem likely to proliferate in the future, whether for war, package delivery or for selfies. Where we saw the potential for community projects, citizen science and social good, others may see different uses still. <br><br> We believe that the more people who are engaged with drone technologies, aerial imagery and their implications, the better. Whirld can help start a more public dialogue about these uses, so we all get a say in what our future will be."
+
     }
 
 
