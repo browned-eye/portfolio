@@ -3,13 +3,14 @@ class ProjectType < ActiveRecord::Base
 end
 
 class Project < ActiveRecord::Base
-  attr_accessor :tools
-  attr_accessor :skills_str
-  attr_accessor :role_str
-  serialize :toolbox_ids
-  serialize :skills
-  serialize :tags
-  serialize :role
+  # attr_accessor :tools_arry
+  # attr_accessor :skills_arry
+  # attr_accessor :role_arry
+  # attr_accessor :tags_arry
+  # # serialize :toolbox_ids,  Array
+  # serialize :skills,  Array
+  # serialize :tags,  Array
+  # serialize :role,  Array
   #validates_presence_of :tags
 end
 

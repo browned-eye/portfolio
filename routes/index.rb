@@ -6,24 +6,25 @@ class Portfolio < Sinatra::Application
 
   get '/projects' do
     @projects = Project.all
-    @projects.to_json
+    @projects_size = @projects.size
+    @projects.to_json(:methods => [:project_size, :skills_str , :role_str] )
   end
 
   get '/projects/:id' do
     @project = Project.find(params[:id])
-    unless @project[:toolbox_ids].nil?
-      @project.tools = @project[:toolbox_ids].join(", ")
-    end
-    unless @project[:skills].nil?
-      @project.skills_str = @project[:skills].join(", ")
-    end
-    unless @project[:role].nil?
-      @project.role_str = @project[:role].join(", ")
-    end
+    # unless @project[:toolbox_ids].nil?
+    #   @project.tools = @project[:toolbox_ids].join(", ")
+    # end
+    # unless @project[:skills].nil?
+    #   @project.skills_str = @project[:skills].join(", ")
+    # end
+    # unless @project[:role].nil?
+    #   @project.role_str = @project[:role].join(", ")
+    # end
     unless @project.description.nil?
       @project.description = @project.description.gsub("'", '')
     end
-    @project.to_json(:methods => [:tools, :skills_str , :role_str] )
+    @project.to_json #(:methods => [:tools, :skills_str , :role_str] )
   end
 
   get '/projectCategories' do

@@ -1,0 +1,84 @@
+[
+
+    {
+        "header": "Problem Statement",
+        "desc": "You may have heard the term drone in the context of military airstrikes, or read that some tech companies like Amazon want to use them. <br><br>But drones are also becoming increasingly available to consumers, with companies like Parrot, DJI and 3D Robotics selling hundreds of thousands a year.<br><br> The average person confused by drones. They don’t know what this technology means. <br><br> When people see someone flying a drone at park or other open space, they tends to give the drone owner weird looks and stares. Most drone owners have a great time flying their drones around, but have trouble finding uses for their drone beyond its entertainment value.",
+        "type": "image",
+        "image": "dji.png"
+    },
+
+    {
+        "desc": "Drones are a rapidly changing technology that extend our ability to explore the world and capture new, rich forms of information like aerial imagery and videos. <br><br>Whirld closes this gap and sparks communication and collaboration between everyone who has a stake in what might be flying over their heads one day.",
+        "image": "whirld1.png",
+        "header": "Whirld closes the gap between the capabilities of drones to capture new data and what people want this information used for.",
+        "type": "image"
+    }, {
+        "image": "whirld3.png",
+        "header": "Whirld Features",
+        "type": "image",
+        "desc": "<b>These were the core app features that we built into Whirld:</b><br><br> 1. Tools for people without drones to contribute to projects about places<br><br> 2. Mechanisms for community building and regulating <br><br>3. A user-tested search and browsing experience that helps surface and ultimately generate new use cases for drones and drone photography<br><br>4. A smarter, more efficient image uploading experience for drone users"
+    }, {
+        "image": "screenshot_searchresults.png",
+        "video": "I_5uEReMs2E",
+        "header": "Searching for Places on Whirld",
+        "type": "video",
+        "desc": "Whirld's search interface was built on elasticsearch. <br><br> It allows a user to user to search for specific projects or users by keyword and/or geographic location. <br><br> Users can also sort their returned search results by relevance, newest, oldest, by popularity. <br><br> When a user searches through Whirld, their search results are sets of images and video that have been curated into specific projects by other users. <br><br> In this sense, Whirld reflects how our users choose to construct information and meaning from raw image and video data that might otherwise have been lost."
+    }, {
+        "image": "whirldprojectscreen.png",
+        "video": "vXXE-rjq_TE",
+        "header": "Whirld's Project Page",
+        "type": "video",
+        "desc": "<b>Whirld is built around projects.</b> A project is a collection of information contributed by different users- images, videos, text and maps.<br><br> There are so many platforms that support just searching a flood of raw images. We didn’t want to reinvent Flickr or Facebook for drones. <br><br>Whirld allow users to create an aerial map of location and below that, arrange their images, video, and text, to reflect the evolving nature of their notions about a place."
+    }, {
+        "image": "goog_mapknitter.png",
+        "type": "image",
+        "header": "Competitive Research",
+        "desc": "We got particular insight from two very different tools: Mapknitter and Google Earth.<br><br> Mapknitter is an open source web tool developed by the Public Lab. Mapknitter allows the average person to place and stitch together their aerial photos onto a basemap. This tool offers higher resolution, more up-to-date versions of an geographical area than Google or NASA. This lead us to make user generated aerial maps the core of a Whirld project. We also conducted usability tests with Google Earth. We asked users to perform a series of tasks associated geographic area using Google Earth.<br><br> Our competitive testing showed that users did not find Google Earth’s use of tool tips and thumbnails on a map effective in conveying a holistic sense of place."
+    }, {
+        "image": "user_interviews.png",
+        "type": "image",
+        "header": "User Interviews and Observation",
+        "desc": "We interviewed academics, students and scientists using drones. We talked to journalists interested in mapping and imagery. We met with and observed drone hobbyists, drone lobbyists, drone startup folks, and people who had just flown a drone for the first time that day. <br><br>Journalists told us about how they were interested in using aerial imagery for stories, but didn’t have access to a drone to capture data. And drone enthusiasts said they were happy to take photos and videos for others but they didn’t know how to connect to someone who might be interested in it."
+    }, {
+        "image": "user_research.png",
+        "type": "image",
+        "header": "Mapping Out the Relationships between Possible Users",
+        "desc": "Our team was able to diagram some user flows and identify gaps missing in the current landscape. <br><br> Specifically, the following was clear: <br> 1. There are tools that take advantage of aerial imagery for commercial purposes. <br> 2. These tools have imagery that is often proprietary and inaccessible to the average person. <br> 3. There are narrative mapping tools that offer little technical capabilities and do not take advantage of the imagery drones can provide. <br><br> Competitive Research not only revealed that there is no tool for the hobbyist drone user to make use of his or her imagery, but there is also no place for people who want to use such imagery to browse, use, or collaborate with it."
+
+    }, {
+        "image": "requesttocollabo.png",
+        "type": "video",
+        "video": "sMM5-1-YxY0",
+        "header": "Collaboration on Whirld",
+        "desc": "Whirld projects are built by a community of users. Each project is broken into smaller pieces, or modules. <br><br> Users can “whirl” aka like a entire project or a particular modules within project. Users can also comment on particular modules within project.<br><br> Positive reinforcement with users is critical. Many of the users we talk to said that they would be willing to share the photos and videos that they take but said they are motivated to share those photos and videos when they can get feedback about a wider audience people to finds those photo and video useful or interesting.<br><br> For a given project, a user can “Request to Collaborate,” which sends a message to the collaborators on the project who can approve or deny the user’s request."
+    }, {
+
+        "image": "image_classifier.png",
+        "type": "video",
+        "video": "N93Ptvg2rQo",
+        "header": "Making Aerial Map Making Easy For Users",
+        "desc":"When a user uploads images to Whirld, an image classifier sorts these images into aerial and non aerial automatically, so he knows which ones he could use to build a map. <br><br> When interviewing users, we found that that was one major pain point in mapmaking and drone flying. Users may take 100s of photos and don’t want to manually sort and classify the huge numbers of images collected. Whirld has a tool to automatically separate aerial images for mapmaking from images taken with a streetview perspective. This tool was built using deep learning techniques in the form of a LeNet convolutional neural network trained on data we collected in the field. We also included a tool to correct the fisheye distortion that many drone cameras have, as well as a classifier to detect faces."
+
+    }, {
+        "image":"object_design.png",
+        "type": "video",
+        "video": "eY6UNbS7aGo",
+        "header": "Participatory Design Study",
+        "desc": "Our initial research indicated that there was an opportunity to enrich aerial imagery with contextual multimedia.  <br><br>Our next challenge then, was to understand how to arrange and display this information to users.  To solve this problem, we developed an object-based, participatory exercise. We provided participants with paper prototypes of our core app features and ask them to arrange the features into an intuitive hierarchy and flow for two senarios. <br><br> Based on our study, we realized our interface should support a variety of layouts. As such, we developed project pages where individuals can organize text and visual media according to their own preferences, dynamically."
+    },
+    {
+      "image":"mapmaking.png",
+      "video":"w31i27z6ZPw",
+      "header": "Adding to  Aerial Maps and Adding Module Content ",
+      "type": "video",
+      "desc":"Once the images are uploaded, it’s easy to incorporate them into different modules on a project. <br><br>Aerial images can be dropped onto the map and automatically placed via GPS. A user can adjust their size and angle, fitting them together appropriately to stitch a map. <br><br> The aerial images that a user captures with a drone are of a higher image quality than Google Satellite, which were taken from a much further distance away. <br><br> A user can also contribute photos, a video URL, or text to Whirld modules to provide additional context about a location. The user clicks to create the module, and then drags and drop photos or enters text in whatever way they feel best conveys what they want to share."
+
+    },{
+         "image":"userprofile.png",
+          "type": "image",
+          "header":"User Profiles to Facilitate Collaboration and Community",
+          "desc":""
+    }
+
+
+]

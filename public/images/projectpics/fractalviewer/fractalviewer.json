@@ -1,0 +1,35 @@
+[
+    {
+        "desc":"Using a pot sensor and force sensor, a viewer can manipulate a fractal onscreen. The goal of this interface is to mimick the experience of dropping an unknown substance on a petri dish and then watching that substance grow under the magnification of a high powered microscope.",
+        "image":"fractalparts.jpg",
+        "header":"Tangible Interface For Exploring Fractals",
+        "type":"image",
+        "video":"none"
+    },
+
+    {
+        "desc":"To enable users to manipulate fractals, I send the sensor input from arduino to Processing, and then manipulate the x,y,z values of the fractals based on the sensor input. You can see the user interacting with interface here.",
+        "image":"screenshotfractalcomputer.png",
+        "header":"Sensor Input Allows for Real-Time Image Manipulation",
+        "type":"video",
+        "video":"0mEngOFRDzM"
+    },
+    {
+        "desc":"I used a recursive function to generate the fractal images in Processing. When the user squeezes the dropper, the amount of force is measured. This value is an input into a recursive algorithm that causes the fractals on screen to expontentially grow.",
+        "image":"screenshotfractal.png",
+        "header":"Force + Recursion = Many Fractals",
+        "type":"image",
+        "video":"screenshotfractal.png"
+    },
+    {
+        "desc":"This was a screen recording the fractals that a user saw as they interacted with the potentiometer and dropper. Important to note that shape and perspective of the fractals that appear on screen directly correlate to the user's manipulation of the input controls.",
+        "image":"screenshotfractalcomputer.png",
+        "header":"What Users Saw on Screen",
+        "type":"video",
+        "video":"aZlawmBoaDY"
+    }
+
+
+
+
+]

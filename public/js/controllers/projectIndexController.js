@@ -1,5 +1,5 @@
 angular.module('portfolio')
-    .controller('ProjectIndexController', ['$scope', '$location', '$anchorScroll', '$routeParams', 'Project', function($scope, $location,$anchorScroll, $routeParams, Project) {
+    .controller('ProjectIndexController', ['$scope', '$location', '$anchorScroll', '$routeParams', 'Project', function($scope, $location, $anchorScroll, $routeParams, Project) {
 
         $scope.home = false;
         //get the project types
@@ -33,7 +33,23 @@ angular.module('portfolio')
             "link": 'http://www.linkedin.com/in/janineheiser',
             "thumbimage": 'linkedin.png'
         }];
+        $scope.itemsPerPage = 9
+        $scope.currentPage = 1;
 
+        $scope.pageCount = function() {
+            return Math.ceil($scope.projects.length / $scope.itemsPerPage);
+        };
+
+        $scope.projects.$promise.then(function() {
+            $scope.totalItems = $scope.projects.length;
+            $scope.$watch('currentPage + itemsPerPage', function() {
+                var begin = (($scope.currentPage - 1) * $scope.itemsPerPage),
+                    end = begin + $scope.itemsPerPage;
+
+                $scope.filteredProjects = $scope.projects.slice(begin, end);
+                console.log($scope.filteredProjects);
+            });
+        });
 
         //use these functions to return whether or not the div is hovered
         // $scope.hoverIn = function() {

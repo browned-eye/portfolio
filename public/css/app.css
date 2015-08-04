@@ -45,7 +45,7 @@ ul {
 }
 
 .landingImg{
-background-image: url("/images/landform2.gif");
+background-image: url("/images/singlepage/landform2.gif");
 background-size: contain;
 background-repeat: no-repeat;
 background-position:center;
@@ -81,7 +81,7 @@ hr {
 
 /***project category styles***/
 .projectTop{
-  padding-top:1.5%;
+  padding-top:2%;
 }
 .filtercathead {
   font-size: 150%;
@@ -168,6 +168,12 @@ a.projectLink {
 
 .projectTaglineText{
   font-size:130%;
+}
+
+.mypag{
+  width:80%;
+  padding-left:53%;
+  margin-top:-2%;
 }
 /******************project show page styles*************************/
 .showpg{
@@ -306,7 +312,7 @@ div[back-img-big] {
 }
 
 .resumeFull{
-  padding-top:3%;
+  padding-top:2%;
   margin-bottom:1%;
   font-size:80%;
 }
@@ -344,8 +350,11 @@ div[back-img-big] {
   margin-right:4%;
   padding-right:8%;
 }
+
+
+
 .resumeitemsplus{
-  font-size:130%;
+  font-size:135%;
   padding-bottom:3.5%;
   margin-top:-2.5%;
   display:block;
@@ -401,8 +410,8 @@ a.resumeclick:active{
 }
 
 .meAbout{
-  width:440px;
-  height:540px;
+  width:500px;
+  height:600px;
   margin-top:-4%;
   margin-left:-1.75%;
 /*  padding-left:5%;*/
@@ -410,7 +419,7 @@ a.resumeclick:active{
 }
 
 .meAboutText{
-  padding-top:7%;
+  padding-top:2.5%;
   font-size:170%;
   margin-right:-2%;
   margin-left:-1%;

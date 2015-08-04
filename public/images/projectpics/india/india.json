@@ -1,0 +1,35 @@
+[
+
+    {
+        "header": "Descriptive Statistics",
+        "image": "indiaone.png",
+        "type": "image",
+        "desc": "For these visualizations, we wanted to give the user a historical overview of the different types of violence that women face in India and show how frequently these crimes occur relative to one another. Plotting the data by year reveals an increase in the number of domestic abuse cases. This could be because either 1) Number of cases of domestic abuse has actually risen dramatically 2) Women are beginning to speak up more about domestic abuse than before."
+    },
+    {
+        "header": "Perpetrators' Profiles Using Age and Gender Data",
+        "image": "indiatwo.jpg",
+        "type": "image",
+        "desc": "The first bar graph explores the ratio of male to female offenders for different types of crimes. Interestingly, the first bar graph reveals that over 40% of all human trafficking crimes are committed by women against other women. We also evaluated the ages of the offenders. The majority of female offenders are ages 30-60 years old and commit domestic cruelty and dowry offenses. This suggests that middle-aged female offenders are in-laws or relatives that violently harass other women over dowry payments or other domestic disputes. Based on the Delhi gang rape verdict for the juvenile offenders, we also wanted to evaluate the ratio of juvenile male perpetrators. Most male offenders are between 18-30 years old; males below 18 years are the least likely to be involved."
+    },
+    {
+        "header": "Crime Hot Spots",
+        "image": "indiathree.png",
+        "type": "image",
+        "desc": "We created a a chloropleth map of India in d3 to visualize the states that had the highest counts of registered cases of domestic violence. We also made a hierarchical bar chart in d3 to understand the breakdown of crime statistics by state and the long tail of distribution of these crimes. <br><br> In retrospect, the hierarchical bar graph could be visually improved limiting the length of the long tail; limiting the long tail would make it for the user to make comparisons between different states were the most crimes occur."
+
+    },
+    {
+        "header": "User Testing Helped the Team Evaluate How Effective a Visualization was in Conveying Meaning",
+        "image": "indiafour.png",
+        "type": "image",
+        "desc": "We wanted to show India’s judicial process of arresting, charge-sheeting, convicting the perpetrators. The data showed that the number of total perpetrators keeps decreasing through the stages from from arrest through chargesheeted to conviction.  We created a sunburst diagram in d3 to show this, however, based on user testing, we found that visualization did not seem to work for most users, and had to be demonstrated by us explicitly. Even after a demo, users did not find the visualization confusing, so we eliminated from the final deliverable."
+    },
+    {
+        "header": "Parallel Coordinates and the Impact of external factors on Domestic Violence",
+        "image": "indiafive.png",
+        "type": "image",
+        "desc": "We created a parallel coordinates visualization in d3 to understand the impact of external factors on domestic violence. This visualization shows the correlation between the literacy rate and the number of cases of domestic violence; Indian states with high literacy rates also tend to have fewer cases of domestic violence."
+    }
+
+]

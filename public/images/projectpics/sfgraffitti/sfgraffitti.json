@@ -1,0 +1,47 @@
+[
+    {
+        "desc":"I created a analytics dashboard in tablau to perform exploratory data analysis about graffitti in San Francisco. I generated and investigated 5 hypotheses through visual analysis. <br><br>Data Sources:<br><a href='https://data.sfgov.org/Public-Works/Graffiti-30-Days/p6sg-7yp7'>1. SF gov data set about graffiti for the last 30 days</a><br><a href='https://data.sfgov.org/Geography/Supervisorial-Districts-as-of-April-2012/6xt7-xiej'>2. SF Board of Supervisors Shape File</a>",
+        "image": "sfgraffittiscreen1.png",
+        "header":"Data Sets and Hypothesis Testing",
+        "type":"image"
+    },
+    {
+        "desc":"Here a short screen capture of my dashboard. Custom shapefiles such as SF supervisor districts are not supported in Tablau. To get custom geocoding roles in Tableau with associated filled areas in Tablau, I used some software called tabgeohack. To make a long story short, tabgeohack  extends  the database schema in Tableau’s custom geocoding database to hold geometry and populating the additional columns from spatial data files. I found the .shp files for the supervisor districts, and then figured out how to use the tabgeohack software by carefully following the instructions provided on the <a href='http://community.tableausoftware.com/thread/116369'>Tableau community website</a>",
+        "image": "sfgraffittiscreen1.png",
+        "header":"Screen Capture of Analytics Dashboard",
+        "type":"video",
+        "video":"0GURq-PcL4g",
+        "html":"none"
+    },
+    {
+      "desc":"The line for the overall amount of graffiti spikes up and down throughout the month. Upon on looking at the line graph, I wanted to learn more about what where causing the spikes in number of graffiti incidents.",
+      "image":"hypthosis1.png",
+      "type":"image",
+      "header":"Hypothesis 1: The overall amount of graffiti in San Francisco is consistent over the course of the month "
+    },
+    {
+      "header":"Hypothesis 2: Certain Types of graffiti are more frequent than others. The overall amount of graffiti spikes for the given day when rarer acts of graffiti are committed.",
+      "image":"Hypothesis2_c.png",
+      "type":"image",
+      "desc":"This hypothesis seems to be accurate. When you look at the individual breakdown of the graffiti by type, the amount of each type of graffiti is actually pretty consistent throughout the month. Rarer types of graffiti, such as illegal postings, are consistently a rarely occurring event.  That being said, the number of graffiti on public and private property does go slightly up and down. Acts of Graffiti most frequently occur on public and private property."
+    },
+    {
+      "header":"Hypothesis 3: Graffiti happens in certain parts of the city more frequently than other parts.",
+      "image":"Hypothesis3.png",
+      "type":"image",
+      "desc":"In particular, I think that higher amounts of graffiti will occur in SOMA, the Mission, and the Tenderloin.  Historically, these three neighborhoods have had higher crime rates and lower income residents than other parts of the city. I believe that this might contribute to higher rates of graffiti.<br><br> This hypothesis is correct. The map shows that highest numbers of graffiti incidents occur in the Mission, followed by SOMA and civic center/tenderloin neighborhoods."
+    },
+    {
+      "header":"Hypothesis 4: Neighborhoods with more graffiti will have a slower turn around times in cleaning up the graffiti.",
+      "image":"Hypothesis4.png",
+      "type":"image",
+      "desc":"To answer this question, I found the average number of days to resolve a graffati incident by taking the average of the incident closing date- the incident start day for each supervisor district. Here the results were surprising. Here, neighborhoods with more graffiti actually took less time to close the incident than neighborhoods where graffiti rarely occurred. For instance, out in the sunset, a supervisor district takes 6.5 days to clean up a incident of graffiti, but only has 46 total instances of graffiti, whereas, it takes the supervisor district in the mission 3.3 days to close a incident, and has 336 instances of graffiti."
+    },
+    {
+      "header":"Hypothesis 5: Do certain types of graffiti occur more frequently in certain parts of the city?",
+      "image":"hypthosis5b.png",
+      "type":"image",
+      "desc":"Sort of. Certain types of graffiti seem to happen in certain parts of the city. Graffiti to public places seems to occur near bus stops and parks. Additionally, abandoned cars tend to appear more on the outskirts of the city. Since the answer was hard to tell by just looking at the shape file map, I figured out how to bring in satellite images from Google maps to get a better idea of the context of where the graffiti was happening. By looking at the context/satellite images, you can get a better sense of the neighborhoods/ geographic features that might make committing a certain type/act of graffiti more appealing or less appealing in a certain area."
+    }
+
+]

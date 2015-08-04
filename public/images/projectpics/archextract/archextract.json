@@ -1,0 +1,67 @@
+[{
+        "header": "Problem: Can Automated Text Analysis Aid Archivists in Describing Large Text-Based Archival Collections?",
+        "image": "problem1.jpg",
+        "type": "image",
+        "desc": "The Bancroft Archive at UC Berkeley currently holds over twenty terabytes of digital text collections. Archive users wanted to know the names, dates, places, and the scope and content of a given digital collection; this information is typically presented to library users in the form of a finding aid. <br><br> Prior to this project, Bancroft didn’t have a cost-effective or systematic way to present this information about digital text collections to users. An in-depth review of scholarly library science journal articles as suggested that text mining algorithms could be used to automate the process of creating finding aids, however, no article pointed to a stand alone tool that could do the job."
+    }, {
+        "header": "Comparative Analysis and Contextual Interviews",
+        "image": "archextract2.png",
+        "type": "image",
+        "desc": "When I started on the project, I did comparative analysis of open source tools that humanities researchers were using for topic modeling and named entity extraction. The comparative analysis of existing tools revealed that most tools were command line based, required some knowledge of programming or required users to run software on their local computer.<br> <br> Through conducting a series of  of interviews with Bancroft Library Archivists, I learned that most of the archivists were uncomfortable with using the command line.  The interviews also revealed that due to privacy and copyright issues, it would be ideal for text collection processing and browsing to be offered as a online service."
+    }, {
+        "header": "Project Goals and Process Flow",
+        "image": "archextract3.png",
+        "type": "image",
+        "desc": "<br>Based on the comparitive analysis and contextual interviews that I conducted, these were the web app's goals: <br><br>be web-based, require no knowledge of the command-line or programming create a standard semi-automated workflow for archivists and provide varying levels of access to users in different roles<br><br> ArchExtract is a software as a service application for automated text analysis.<br><br> The web app packages, manages and automates a number of topic modeling, named entity and keyword algorithms.<br> It also provides interface to browse and explore the text collection."
+    }, {
+        "header": "Importing Collection",
+        "image": "archextract4.png",
+        "type": "image",
+        "desc": "An archivist inputs the server path to text collection into the web ui.  An automation job extracts the plain text from the collection files and imports the corresponding collection metadata. After the collection is imported, the web app sends an email to user to let them know that the job is done.<br><br> Currently, the web app can import pdf, word doc, and excel file formats. <br><br> We tried three different types of digital text formats to understand how the intial data quality of a text collection effected the final results."
+    },
+    {
+        "header": "Preprocessing",
+        "image": "archextract5.png",
+        "type": "image",
+        "desc": "Through the app's UI, a user can select of number preprocessing jobs to reduce the collection's vocabulary size. Based on the user's choices, the web app runs a series of python scripts as a background job.<br><br>Preprocessing options: <br>1. Remove stop words- these are non content bearing terms like a, the, and, etc. <br><br>2. Remove infrequent terms-typically, we want to remove terms that only appear once <br><br> 3. Part of speech tagging- a user might filter out all verbs to only leave adjectives and noun words<br><br> 4. Apply <a href='http://en.wikipedia.org/wiki/Tf%E2%80%93idf'>TF-IDF term weighting</a>. This algorithm weights the terms to find relevant terms <br> <br> 5. Stem words- reduce words to their root."
+    },
+    {
+        "header": "Topic Modeling",
+        "image": "archextract6.png",
+        "type": "image",
+        "desc": "Topic modeling is useful in identifying recurring patterns of co-occurring words in a large, unstructured collection of unlabeled text. Sets of co-occuring words that frequently appear in the corpus make up the collection's topics.<br><br>I implemented <a href=’http://mallet.cs.umass.edu/’>Mallet</a>, a java based statistical natural language processing library to create the topics. Mallet has an efficient sampling-based implementation of the <a href=’https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation’>Latent Dirichlet Allocation (LDA)</a> algorithm; this algorithm statistically identifies a collection’s topics. <br><br> I used <a href=’https://github.com/collectiveidea/delayed_job’>delayed job</a> to run and managed a series of background jobs. Delayed job ran a series shell commands to run Mallet and parse the resulting output. After the topics for a collection are identified and imported into the web app’s database, the web app sends a email to the user to let him or her know that the topic modeling job is done."
+    },
+     {
+        "header": "Topic Documents",
+        "image": "archextract7.png",
+        "type": "image",
+        "desc": "A topic model associates each topic with a set of documents and document with a set of topics. <br><br> This interface presents the user with a list documents that are associated with given topic. The document results are sorted by their relevance to the topic, as assigned by Mallet. <br><br>This interface was designed to enable users to casually browse and discover useful or relevant collection documents similar to the experience of the shelf reading. In a physical library setting, humanities and social science researchers will often serendipitous find useful resources by browsing nearby books on a shelf near the particular book that they are looking for."
+    },
+    {
+        "header": "Document with Associated Topic Models",
+        "image": "archextract8.png",
+        "type": "image",
+        "desc": "The main area of the view shows the pdf of the document to the user. The righthand box presents the user with links to other topics that document is associated with."
+    },
+     {
+        "header": "Named Entity Extraction",
+        "image": "archextract9.png",
+        "type": "image",
+        "desc": "To extract named entities, I implemented the <a href=’http://nlp.stanford.edu/software/CRF-NER.shtml’> Stanford Named Entity Recognizer (NER) library</a>.  The Stanford Named Entity Recognizer runs on a separate port from the web app as java server instance. <br><br> Delayed job runs and manages a set of python scripts. These scripts send the collection text to the Stanford Named Entity Recognizer. <br><br> Next, a map-reduce job written with <a href=’https://github.com/Yelp/mrjob’>python’s mr job library</a> parses the resulting output, counts how many times a given named entity appears in the collection and finally groups the resulting named entities four groups: people, places, organizations, and dates. <br><br>Since a collection could be several gigabytes in size, using map-reduce allows the process to be distributed over several machines to minimize the job processing time."
+    },
+     {
+        "header": "Fuzzy Matching to Group Similar Named Entities",
+        "image": "archextract10.png",
+        "type": "image",
+        "desc": "Here’s the view when you click on a specific named entity. I used fuzzy matching to group similar named entities together. <br><br>In this example, we have the named entity, Le Conte. In collection documents, that  name can appear as Joseph Le Conte, JN Le Conte, Joseph N. Le Conte, etc. This interface shows a researcher the variation in the ways that a name can appear and provide links to those named entities. <br><br>Showing the variation for a given person, place or organization provide researchers with a rich set of search terms and a way to browse documents that may have not originally considered."
+    },
+    {
+        "header": "Next Steps",
+        "image": "nextsteps.png",
+        "type": "image",
+        "desc": "The next steps for this project are to write a docker script to the deploy web app on Bancroft Library servers. ArchExtract will go live on the library servers in September of 2015. <br><br>Additionally, if I had more time to extend this project, I would try to do the following:<br><br>-More user testing with researchers and archivists<br><br>-Use an library API to link to collection metadata. Unfortunately, at the time of the project, Bancroft library did not have a web api to serve up collection metadata <br><br>- Implement ElasticSearch to provide full-text search on the entire collection"
+    }
+
+
+
+]

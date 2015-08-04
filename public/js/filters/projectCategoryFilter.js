@@ -25,6 +25,7 @@ angular.module("portfolio").filter('categoryFilter', function() {
                     var tags = collection[i].tags;
                     var seenprojects = [];
                     if (tags && tags.length >= 1) {
+                        tags = tags.split(",");
                         for (z = 0; z < tags.length; z++) {
                             if (regcat.test(tags[z])) {
                                 if (!(isInArray(collection[i].title_short, seenprojects))) {

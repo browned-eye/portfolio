@@ -12,14 +12,15 @@
       <div class="row projShowItem" ng-show="project.place"> <b>CLIENT</b>: {{project.place}} </div>
       <div class="row projShowItem" ng-show="project.proj_date"> <b>DATE</b>: {{project.proj_date}} </div>
       <div class="row projShowItem" ng-show="project.team"> <b>TEAM</b>: {{project.team}} </div>
+      <div class="row projShowItem" ng-show="project.role"> <b>ROLE</b>: {{project.role}} </div>
+
      </div>
     <div class= "col-sm-3 projShowCard">
-       <div class="row projShowItem" ng-show="project.skills_str"> <b>SKILLS</b>: {{project.skills_str}} </div>
-        <div class="row projShowItem" ng-show="project.role_str"> <b>ROLE</b>: {{project.role_str}} </div>
-    </div>
+       <div class="row projShowItem" ng-show="project.skills"> <b>SKILLS</b>: {{project.skills}} </div>
+         </div>
     <div class= "col-sm-3 projShowCard">
-      <div class="row projShowItem" ng-show="project.tools"><b>TOOLS</b>: {{project.tools}} </div>
-      <div class="row projShowItem"><b>PROJECT LINKS</b><a ng-show="project.github" href="{{project.github}}"><br>link to github repo</a><a ng-show="project.website" href="{{project.website}}"><br> link to full website</a><a ng-show="project.report" href="{{project.report}}"><br>link to report</a></div>
+      <div class="row projShowItem" ng-show="project.toolbox_ids"><b>TOOLS</b>: {{project.toolbox_ids}} </div>
+      <div class="row projShowItem"><b>PROJECT LINKS</b><a ng-show="project.github" href="{{project.github}}"><br>link to github repo</a><a ng-show="project.website" href="{{project.website}}"><br> link to website</a><a ng-show="project.report" href="{{project.report}}"><br>link to report</a></div>
     </div>
   </div>
   <div class="row showDescrip">

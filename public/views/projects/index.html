@@ -21,7 +21,7 @@
         <pto-toolbox-selector ng-model="search.tool"></pto-toolbox-selector>
       </div>
     <div class="col-sm-9 projectsdisp">
-      <div ng-repeat="project in myprojects = ( projects  | categoryFilter:search.category | toolFilter:search.tool  | categoryFilter:stuff) track by $index" ng-if="$index % 3 == 0" class="row projectsrow">
+      <div ng-repeat="project in myprojects = ( filteredProjects  | categoryFilter:search.category | toolFilter:search.tool  | categoryFilter:stuff) track by $index" ng-if="$index % 3 == 0" class="row projectsrow">
       <!-- first item -->
         <div class="col-xs-4 projectcard">
           <a class="projectLink" href="#/projects/{{myprojects[$index].id}}">
@@ -67,13 +67,16 @@
       </div>
     </div>
   </div>
+  <div class="row mypag">
+    <pagination page="currentPage" total-items="totalItems" items-per-page="itemsPerPage" on-select-page="setPage(page)"></pagination>
+ </div>
   <!--************EXPERIENCE SECTION***************************-->
   <div id="experience" class="row"><hr></div>
-  <div class="row resumeFull"> <a href="/images/janineheiser_resume.pdf" download="janineheiser_resume">Download Full Resume</a></div>
+  <div class="row resumeFull"> <a href="/images/singlepage/janineheiser_resume.pdf" download="janineheiser_resume">Download Full Resume</a></div>
   <div class="row resumeHead">PROFESSIONAL EXPERIENCE</div>
   <div class="myjobs">
   <!-- first job -->
-    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed = !isCollapsed" >WEB DEVELOPER, Bancroft Library, Summer 2014, UC Berkeley</a> </div>
+    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed = !isCollapsed" >WEB DEVELOPER, Bancroft Library, Summer 2014 and Spring 2015, UC Berkeley</a> </div>
     <div class="resumeJobItemContainer" collapse="isCollapsed">
       <div class="row resumeJobItem">
           + Created a fully functional, Ruby on Rails web application that utilized a variety of existing natural
@@ -82,6 +85,9 @@
       <div class="row resumeJobItem">
           + The web application enables researchers and archivists to extract meaningful semantic topics andnamed entities from a given digital archival collection.
       </div>
+      <div class="row resumeJobItem">
+        + Awarded a Bancroft Digital Archive Fellowship in Spring of 2015 to further develop the project that was started during the Summer of 2014.
+       </div>
     </div>
     <!-- second job -->
     <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed2 = !isCollapsed2">SYSTEMS ADMINISTRATOR, July 2013-December 2014, UC Berkeley School of Law, Statewide Database Project </a></div>
@@ -124,8 +130,8 @@
   <div class="row extraSkillz">
     <div class="col-xs-6">
       <div class="row resumeItemsHead">TECHNICAL SKILLS </div>
-      <div class="row resumeitems"><div>PROGRAMMING</div><div class="resumeskillsContainer">python, ruby, java, bash scripting</div></a></div>
-      <div class="row resumeitems"><div>WEB</div><div class="resumeskillsContainer"> ruby on rails, HTML/CSS, jQuery, ajax, node.js, php, sinatra, flask, nginx and apache webserver administration</div></a></div>
+      <div class="row resumeitems"><div>PROGRAMMING</div><div class="resumeskillsContainer">python, ruby, bash scripting</div></a></div>
+     <div class="row resumeitems"><div>WEB</div><div class="resumeskillsContainer"> ruby on rails, javascript, jQuery + ajax,  HTML+CSS, angular.js, node.js, php, sinatra, flask, nginx and apache webserver administration</div></a></div>
       <div class="row resumeitems"><div>DBMS</div><div class="resumeskillsContainer"> highly skilled in database design, administration and query optimization; familiarity with mapreduce concepts and nosql dbs like mongodb and sparkdb</div></a></div>
       <div class="row resumeitems"><div>DATA ANALYSIS AND VISUALIZATION</div><div class="resumeskillsContainer"> d3, highcharts, tableau, scipy, pandas, R </div></a></div>
     </div>
@@ -144,11 +150,12 @@
   <div class="row meAboutHead"> ABOUT </div>
   <div class="row meAboutContainer">
     <div class="meAbout col-xs-6">
-      <div back-img="images/me.jpg"></div>
+      <div back-img="images/singlepage/me.jpg"></div>
     </div>
     <div class="meAboutText col-xs-6">
-      Originally a self-taught programmer, I had the opportunity to go back to school at the UC Berkeley School of Information to learn best practices for data management and product usability.
-      My work and educational experiences have taught me that good information organization complements user experience design.
+      I'm a full-stack developer and data analyst from the San Francisco Bay Area with specialties in user research, prototyping, and interaction design. <br><br>
+      Originally a self-taught programmer, I recently had the opportunity to go back to school at the UC Berkeley School of Information to learn best practices for data management and user experience design.
+      My work and educational experiences have taught me that good information organization complements usability.<br><br>
       I'm seeking to work in collaborative work environment; I love to share ideas, learn from others and be part of a team.
       </br></br>
       I also like to hike, travel, and go swimming.
@@ -169,14 +176,14 @@
       <div ng-repeat="item in contactItems">
         <div class="row contactitem">
           <div class="col-xs-3 contactThumb">
-            <a href="{{item.link}}"><div back-img="images/{{item.thumbimage}}"></div></a>
+            <a href="{{item.link}}"><div back-img="images/singlepage/{{item.thumbimage}}"></div></a>
           </div>
           <a class="contactlink col-xs-3" href="{{item.link}}"> {{item.name}}</a>
         </div>
       </div>
     </div>
     <div class="meAbout col-xs-6">
-      <div back-img="images/meandchichi.jpg"></div>
+      <div back-img="images/singlepage/meandchichi.jpg"></div>
     </div>
   </div>
 

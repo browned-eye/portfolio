@@ -20,6 +20,7 @@ angular.module("portfolio").filter('toolFilter', function() {
                     var projectTools = collection[i].toolbox_ids;
                     var seenprojects = [];
                     if (projectTools && projectTools.length >= 1) {
+                       projectTools = projectTools.split(",");
                         for (z = 0; z < projectTools.length; z++) {
                             if (re1.test(projectTools[z])) {
                                 if (!(isInArray(collection[i].title_short, seenprojects))) {
