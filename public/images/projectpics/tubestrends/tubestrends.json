@@ -1,0 +1,9 @@
+[{
+
+
+  "header": "An ETL to Collect Internet Trends ",
+  "image": "tubestrend1.png",
+   "type": "image",
+  "desc":"In popular media, there is much talk about social networking trends, and “what’s trending” online. For our final project, our team was interested in exploring trends published on social media platforms. Specifically, our group wanted to explore the trends published on Google hot trends, the Twitter trends API, the Instagram 'most popular' API, Yahoo! trends and YouTube trends. <br><br>TubesTrends is an ETL that makes a series of automated OO-ruby scripts make API calls and scrape websites. The automation allows internet trend data to be collected 24/7."
+
+  }]

@@ -33,40 +33,11 @@ angular.module('portfolio')
             "link": 'http://www.linkedin.com/in/janineheiser',
             "thumbimage": 'linkedin.png'
         }];
-        $scope.itemsPerPage = 9
+        // pagination! piping the filters hellah times for the win!!!!
         $scope.currentPage = 1;
+        $scope.itemsPerPage = 9;
 
-        $scope.pageCount = function() {
-            return Math.ceil($scope.projects.length / $scope.itemsPerPage);
-        };
 
-        $scope.projects.$promise.then(function() {
-            $scope.totalItems = $scope.projects.length;
-            $scope.$watch('currentPage + itemsPerPage', function() {
-                var begin = (($scope.currentPage - 1) * $scope.itemsPerPage),
-                    end = begin + $scope.itemsPerPage;
-
-                $scope.filteredProjects = $scope.projects.slice(begin, end);
-                console.log($scope.filteredProjects);
-            });
-        });
-
-        //use these functions to return whether or not the div is hovered
-        // $scope.hoverIn = function() {
-        //     $scope.hoverDiv = true;
-        // };
-
-        // $scope.hoverOut = function() {
-        //     $scope.hoverDiv = false;
-        // };
-        //The above was all wrong. using this caused problems with bootstrap rows
-        //where the cards where too big and pushing other cards down.
-        //Need to wrap groups of three project cards in a row.
-        //then using this was a problem because it didn't know which element to bind
-        //the mouse listener to and changed the whole row. Need to get the specific
-        //element for this- used a directive to grab the parent element and bind
-        //the mouselistner to to the parent element; this allowed me to
-        //just update the css of the child to display none to show.
     }]);
 
 

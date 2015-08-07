@@ -1,0 +1,61 @@
+[{
+        "header": "Introduction",
+        "image": "explosion.jpg",
+        "type": "image",
+        "desc": "Over the past fives, the US has increased its and oil production by fifty percent.  In an absence of sufficient pipeline infrastructure, oil and natural gas producers  resorted to transporting oil and natural gas via rail. A series of explosive and deadly train accidents in 2013 highlighted the potential for danger and provoked national press coverage.  <br><br> As domestic production of fossil fuels has increased, the oil and natural gas industry has pushed to build build new pipelines. Specifically, industry leaders claim that pipelines can more safely and efficiently transport oil and natural gas than truck, barge or rail. However, in the past few years, there have been multiple catastrophic and deadly pipeline accidents."
+
+    },
+
+    {
+        "header": "Data Set",
+        "image": "enbridge.jpg",
+        "type": "image",
+        "desc": "In an effort to further explore issues that recent catastrophic accidents have raised, this project hope find out where rail and pipeline incidents are occurring and if the locations of these incidents has changed over time.<br><br> To explore my research questions, I used the data collected by the Emergency Response Notification System (ERNS) from 2005-2014. This ERNS data contains information about oil spils, chemical releases and maritime security incident<br><br>I was able to download the ERNS data from <a href='http://www.nrc.uscg.mil/'> the US Coast Guard Nation Response Center website</a>.  The dataset contained information about the datetime of an incident, the type of material released into the environment, the location of the nearest city where the incident occurred to name a few."
+    }, {
+        "header": "How do the numbers of rail and pipeline accidents involving fossil fuels compare? Is there a greater number incidents involving fossil fuel as opposed to other materials?",
+        "image": "oil1.png",
+        "type": "image",
+        "desc": "At a most basic level, the charts below show the number of rail and pipeline incidents by year. Like newspaper articles suggested, the number of fossil fuel related railroad incidents has increased over the last few years. Additionally, the line graphs below suggest that majority of rail and pipeline incidents release materials related to fossil fuels into the environment; other, non-fossil fuel materials released in pipeline and railroad make up around one-third of the total number of rail and pipeline incidents."
+    }, {
+        "header": "What are the most common types of fossil fuels being spilled in rail and pipeline accidents?",
+        "image": "all_bar_graphs.jpg",
+        "type": "image",
+        "desc": "The bar charts show the most common types of materials that are released during an pipeline or railroad incident.  Fossil fuels make up the majority of the material released in pipeline and rail incidents. In pipeline incidents, natural gas was the most frequently released material, while diesel oil was the most frequently released material in railroad incidents."
+    }, {
+        "header": "Where in the United States are fossil fuel related pipelines and railway incidents occuring?",
+        "image": "prelim_dot_plot_incidents.jpg",
+        "type": "image",
+        "desc": "I plotted the latitude and longitude of all pipeline and rail incidents to get a preliminary sense of the geographic locations of where these events occurred. These incidents are clustered in specific areas. Additionally, I have included images of the rail and pipeline network in the United States. At first glance, most rail and pipeline incidents occur in areas of the country where there is a high density of railroad lines or pipelines."
+    }, {
+        "header": "Where in the United States are fossil fuel related pipelines and railway incidents LIKELY to occur? ",
+        "image": "combined_histo_heatmap.jpg",
+        "type": "image",
+        "desc": "To find out where rail and pipeline incidents are likely to occur, one needs to create a density function. Density functions create a heatmap. To find an density function display the heat map colors, I used a quadrant technique; specifically, I broke the space of the United States into regularly spaced units and counted the number of instances in each bin (aka a 2-D histogram). The color of a particular quadrant is dependent on the number of events that occurred in the quadrant. <br><br> Railroad incidents tend to most frequently occur in the north eastern part of the United States, while fossil fuel and non-fossil fuel related pipeline incidents tend occur primarily around the gulf coast. It is also interesting to note that the intensity fossil-fuel related incidents is similar the intensity of non-fossil fuel related incidents. This suggests the probability of train and pipeline accidents in a given area is non-influenced by the material that train or pipeline is carrying. When one looks at the maps of the railroad and pipeline networks, this finding makes intuitive sense: Rail and pipeline incidents appear to happen in geographic areas where there is a high density of pipelines and railroads lines."
+    }, {
+        "header": "Have the geographic “hot spots” (areas where incidents are more likely to occur) for fossil fuel related incidents changed over time?",
+        "image": "kernal_oil_pp.gif",
+        "type": "image",
+        "desc": "In addition to using quadrant binning to find the geographic areas of the country where rail and pipeline incidents are more likely to occur, I also a kernel density function. The approach of binning events into quadrants to find hotspots has several problems, mainly, the bins have edges and different binning structures can produce different results. Using a kernel estimator to find the intensity of events occurring in an area allows one to get a smother estimate of the likelihood of an event occurring in that particular area. <br><br> To investigate whether or not geographic hot spots of train and rail incidents had changed over time, I ran a kernel density function on each year of data for a ten year period of 2005-2014, and then graphed the kernel density function. I used a Gaussian kernel, implemented in the python library, scipy.stats. The kernel density function, scipy.stats.guassian_kde had an feature for automatic bandwidth detection. <br><br>Here is a KDE heatmap of the likelihood of pipeline fossil fuel related incident occuring in a particular geographic area."
+    }, {
+        "image": "kde_other_pp.gif",
+        "type": "image",
+        "header": "KDE Function Shows Pipeline Incident Hotspots Over Time",
+        "desc":"Here is a KDE heatmap of the likelihood of pipeline related incident involving all other materials occurring in a particular geographic area.<br><br> The KDE heatmap plots indicate that the likelyhood of a fossil fuel or other materials pipeline incident has not changed over the last decade. In the ten year period studied, the intensity of pipeline incidents for a geographic area is similar for both incidents that involved fossil-fuel and non-fossil fuel materials."
+    }, {
+        "image": "railroads_oil.gif",
+        "type": "image",
+        "header":"KDE Function Shows Railroad Fossil Fuel Related Incident Hotspots Over Time",
+        "desc":"Here is a KDE heatmap of the likelihood of railroad fossil fuel related incident occurring in a particular geographic area."
+    }, {
+        "image": "rr_other.gif",
+        "type": "image",
+        "header":"Geographic Hotspots For Fossil Fuel and Other Material Incidents are Similar Over Time",
+        "desc":"Here is a KDE heatmap of the likelihood of a railroad incidents that involve all other materials (non-fossil fuels) over the years 2005-2014.<br><br>Like pipeline incidents, the KDE heatmap plots indicate that the likelihood of a fossil fuel or other materials rail incident have not changed over time. In the ten year period studied, the intensity of both fossil-fuel and non-fossil fuel material railroad incidents for a geographic area is similar."
+    }, {
+        "header": "Conclusions/Significance of Findings",
+        "image": "conclusions.jpg",
+        "type": "image",
+        "desc":"My findings show that geographic areas that have the highest intensity of oil and natural gas related pipeline and railroad accidents also have a high density of railroad lines or pipelines. Major rail and pipeline thoroughfares should not be built near fragile ecosystems; geographic areas that contain a high density of rail or pipeline networks have a high intensity of rail and train accidents involving oil and natural gas. The greater the amount of railways and pipelines in an area, the greater the chances that oil and toxic chemicals will spill into the area."
+    }
+
+]

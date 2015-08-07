@@ -21,7 +21,8 @@
         <pto-toolbox-selector ng-model="search.tool"></pto-toolbox-selector>
       </div>
     <div class="col-sm-9 projectsdisp">
-      <div ng-repeat="project in myprojects = ( filteredProjects  | categoryFilter:search.category | toolFilter:search.tool  | categoryFilter:stuff) track by $index" ng-if="$index % 3 == 0" class="row projectsrow">
+    <!-- angular piping filters are awesome!!! this would be hell otherwise! -->
+      <div ng-repeat="project in myprojects = ( filtered =  ( projects | categoryFilter:search.category | toolFilter:search.tool  | categoryFilter:stuff) | startFrom:(currentPage-1)*itemsPerPage | limitTo:itemsPerPage) track by $index" ng-if="$index % 3 == 0" class="row projectsrow">
       <!-- first item -->
         <div class="col-xs-4 projectcard">
           <a class="projectLink" href="#/projects/{{myprojects[$index].id}}">
@@ -37,8 +38,8 @@
           </a>
         </div>
         <!-- second item -->
-        <div class="col-xs-4 projectcard">
-          <a class="projectLink" href="#/projects/{{projects[$index+1].id}}">
+        <div ng-if="myprojects[$index+1]" class="col-xs-4 projectcard">
+          <a class="projectLink" href="#/projects/{{myprojects[$index+1].id}}">
             <div class="projectThumbImg">
               <div hideonhoverparent back-img="images/projectpics/{{myprojects[$index+1].title_short}}/{{myprojects[$index+1].thumb}}"></div>
               <div class="projectTagline" showonhoverparent>
@@ -51,8 +52,8 @@
           </a>
         </div>
         <!-- Third item -->
-        <div class="col-xs-4 projectcard">
-          <a class="projectLink" href="#/projects/{{projects[$index+2].id}}">
+        <div ng-if="myprojects[$index+2]" class="col-xs-4 projectcard">
+          <a class="projectLink" href="#/projects/{{myprojects[$index+2].id}}">
             <div class="projectThumbImg">
               <div back-img="images/projectpics/{{myprojects[$index+2].title_short}}/{{myprojects[$index+2].thumb}}" hideonhoverparent></div>
               <div class="projectTagline" showonhoverparent>
@@ -68,7 +69,7 @@
     </div>
   </div>
   <div class="row mypag">
-    <pagination page="currentPage" total-items="totalItems" items-per-page="itemsPerPage" on-select-page="setPage(page)"></pagination>
+    <pagination  page="currentPage" total-items="filtered.length" items-per-page="itemsPerPage" on-select-page="setPage(page)"></pagination>
  </div>
   <!--************EXPERIENCE SECTION***************************-->
   <div id="experience" class="row"><hr></div>
