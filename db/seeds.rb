@@ -53,7 +53,7 @@ Project.where(:title_short => "sfgraffitti").update_all( tags: 'info_viz', toolb
 
 Project.where(:title_short => "india").update_all(tags: 'info_viz',  toolbox_ids: 'd3, html+css, javascript, tablau', skills:'data analysis, data visualization, user testing', role:'exploratory data analysis, creation of d3 and highcharts visualizations, user testing')
 
-Project.where(:title_short => "tubestrends").update_all(tags: 'dbs',  toolbox_ids: 'mongo db, mysql, amazon ec2, shell scripting, python', skills:'automation engineering, server admininstration, ETL pipline creation, data management')
+Project.where(:title_short => "tubestrends").update_all(tags: 'dbs',  toolbox_ids: 'mongo db, mysql, amazon ec2, shell scripting, ruby, python', skills:'automation engineering, server admininstration, ETL pipline creation, data management')
 
 Project.where(:title_short => "caceo").update_all( tags: 'web_dev',  toolbox_ids: 'ruby on rails, html+css, mysql, jquery+ajax', skills:'contextual interviewing, dev ops, product design, web development')
 

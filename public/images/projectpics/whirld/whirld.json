@@ -33,7 +33,7 @@
         "image": "goog_mapknitter.png",
         "type": "image",
         "header": "Competitive Research",
-        "desc": "We got particular insight from two very different tools: Mapknitter and Google Earth.<br><br> Mapknitter is an open source web tool developed by the Public Lab. Mapknitter allows the average person to place and stitch together their aerial photos onto a basemap. This tool offers higher resolution, more up-to-date versions of an geographical area than Google or NASA. This lead us to make user generated aerial maps the core of a Whirld project. We also conducted usability tests with Google Earth. We asked users to perform a series of tasks associated geographic area using Google Earth.<br><br> Our competitive testing showed that users did not find Google Earth’s use of tool tips and thumbnails on a map effective in conveying a holistic sense of place."
+        "desc": "Our project team got particular insight from two very different tools: Mapknitter and Google Earth.<br><br> Mapknitter is an open source web tool developed by the Public Lab. Mapknitter allows the average person to place and stitch together their aerial photos onto a basemap. This tool offers higher resolution, more up-to-date versions of an geographical area than Google or NASA. This lead us to make user generated aerial maps the core of a Whirld project. We also conducted usability tests with Google Earth. We asked users to perform a series of tasks associated geographic area using Google Earth.<br><br> Our competitive testing showed that users did not find Google Earth’s use of tool tips and thumbnails on a map effective in conveying a holistic sense of place."
     }, {
         "image": "user_interviews.png",
         "type": "image",
@@ -84,7 +84,7 @@
         "type": "image",
         "header": "Reflection",
         "image": "hellowhirld.png",
-        "desc": "When we started the project, we were excited about the challenge of working with drones: a new, changing technology, and with the possibilities of designing for complex image data.<br><br>  As we all know, a picture is worth a thousand words. But what about a drone that can take a thousand pictures?<br><br> Drones seem likely to proliferate in the future, whether for war, package delivery or for selfies. Where we saw the potential for community projects, citizen science and social good, others may see different uses still. <br><br> We believe that the more people who are engaged with drone technologies, aerial imagery and their implications, the better. Whirld can help start a more public dialogue about these uses, so we all get a say in what our future will be."
+        "desc": "When I started the project, I was excited about the challenge of working with drones: a new, changing technology, and with the possibilities of designing for complex image data.<br><br>  As we all know, a picture is worth a thousand words. But what about a drone that can take a thousand pictures?<br><br> Drones seem likely to proliferate in the future, whether for war, package delivery or for selfies. Where I saw the potential for community projects, citizen science and social good, others may see different uses still. <br><br> I believe that the more people who are engaged with drone technologies, aerial imagery and their implications, the better. Whirld can help start a more public dialogue about these uses, so we all get a say in what our future will be."
 
     }
 
