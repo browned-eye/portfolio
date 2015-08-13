@@ -55,7 +55,7 @@ Project.where(:title_short => "india").update_all(tags: 'info_viz',  toolbox_ids
 
 Project.where(:title_short => "tubestrends").update_all(tags: 'dbs',  toolbox_ids: 'mongo db, mysql, amazon ec2, shell scripting, ruby, python', skills:'automation engineering, server admininstration, ETL pipline creation, data management')
 
-Project.where(:title_short => "caceo").update_all( tags: 'web_dev',  toolbox_ids: 'ruby on rails, html+css, mysql, jquery+ajax', skills:'contextual interviewing, dev ops, product design, web development')
+Project.where(:title_short => "caceo").update_all( tags: 'web_dev',  toolbox_ids: 'ruby on rails, html+css, mysql, jquery+ajax', skills:'contextual interviewing, product design, web development')
 
 Project.where(:title_short => "fractalviewer").update_all( tags: 'tui',  toolbox_ids: 'arduino, processing, java', skills:'prototyping, tangible ui design')
 

@@ -5,5 +5,28 @@
    "type": "image",
   "desc":"In popular media, there is much talk about social networking trends, and “what’s trending” online. For the data mining final project, I team was interested in exploring trends published on social media platforms. <br><br>TubesTrends is an ETL that makes a series of automated OO-ruby scripts make API calls and scrape websites. The automation allows internet trend data to be collected 24/7.<br><br>I tried to use the collected to data because I wanted a way to: <br>1. See aggregated internet trends in real time and over the long-term.<br>2.Compare and contrast what's “trending” on different internet and social media platforms to see if there are similar common themes."
 
-  }
+  },
+  {
+  "header": "Data Sources",
+  "image": "tubestrend2.png",
+   "type": "image",
+  "desc":"I collected data from the following places, either by calling an API or through web scraping:<br><br> - <a href='https://dev.twitter.com/rest/reference/get/trends/place'> Twitter Trends API resource, GET trends/place</a> <br>- <a href='http://www.google. com/trends/hottrends'> Google Hot Trends</a><br>- <a href='https://instagram.com/developer/api-console/?hl=en'> Instagram API resource, GET Most Popular</a><br>- <a href='www.yahoo.com'> Yahoo <a/>(trends located on right side of homepage page)<br>- <a href=’https://www.youtube.com/trendsdashboard’> YouTubes Trends dashboard </a>"
+  },
+{
+  "header": "Automated ETL Pipeline",
+  "image": "tubestrend3.png",
+   "type": "image",
+  "desc":"When possible, I tried to make API calls to collect the data, however, only Twitter and Instagram publish their self­ reported trend data via an API. To collect trend data from Google, YouTube, and Yahoo, I had to extract from the website HTML directly. The process of scraping was multilayered owing to the fact that javascript renders the HTML for websites directly to the browser. ­­ Additionally, some of the data I collected appeared on multiple pages of a given web platform. <br><br> To circumvent these complications, we used the Ruby library called Headless and Watir. With <a href='https://github.com/leonid-shevtsov/headless'>Headless</a>, I was able to create an in­shell instance of a FireFox browser, which allowed me to render and parse the website’s html.  Using the <a href='https://github.com/watir/watir'>watir library</a>, I automated the process of clicking a series of links and menu buttons letting us collect trend data from multiple pages on given platform."
+},
+
+{
+"header": "Data Analysis Questions",
+  "image": "tubestrend4.png",
+   "type": "image",
+   "desc":""
+
+}
+
+
+
   ]
