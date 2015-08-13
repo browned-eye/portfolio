@@ -44,6 +44,6 @@ setTimeout(
 
         angular.bootstrap(document, ["portfolio"]);
 
-    }, (6 * 1000)
+    }, (5 * 1000)
 );
 
