@@ -1,9 +1,62 @@
-[
-    {
+[{
 
-  "header": "Check Back Later",
-  "image": "coming-soon.png",
-   "type": "image",
-   "desc": "This project is under construction, check back in the next few days. "
+        "header": "Breath, Sync, Balance",
+        "image": "meeglo1.png",
+        "type": "image",
+        "desc": "This project is under construction, check back in the next few days. "
+    },
+
+    {
+        "header": "Meeglo Senses Your Heart Rate and Glows as It Changes",
+        "image": "meeglobreathing.png",
+        "type": "image",
+        "desc":" It’s a tool for heart-centered breathing, so you can learn to match your heart to your breath and balance your mind."
+    },
+
+    {
+        "header": "Intial Prototype",
+        "image": "meegloproto1.png",
+        "type": "image",
+        "desc":""
+    },
+    {
+        "header": "Contextual Interviews and User Testing",
+        "image": "meeglobizfair.jpg",
+        "type": "image",
+        "desc":""
+    },
+
+    {
+        "header": "Affinity Diagramming",
+        "image": "meegloaff.png",
+        "type": "image"
+    },
+
+    {
+        "header": "Iterative Prototype",
+        "image": "meegloproto2.jpg",
+        "type": "image"
+    },
+    {
+        "header": "Iterative User Testing",
+        "image": "meeglo_usertest.png",
+        "type": "image"
+    },
+    {
+        "header": "Product Development",
+        "image": "meeglobizcard.jpg",
+        "type": "image"
+    },
+
+
+    {
+        "header": "Reflections and Next Steps",
+        "image": "dilbertallnew.png",
+        "type": "image"
     }
+
+
+
+
+
 ]

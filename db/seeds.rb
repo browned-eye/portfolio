@@ -47,13 +47,13 @@ Project.where(:title_short => "meeglo").update_all( tags: 'ux_research, web_dev,
 
 Project.where(:title_short => "archextract").update_all( tags: 'nlp, web_dev, dbs', toolbox_ids: 'mysql, ruby on rails, html+css, javascript, python, map reduce, shell scripting, jquery+ajax,', skills:'contextual interviewing, comparative analysis, dev ops, automation, product design, web development', role:'ux research, front and backend web development, dev ops, product design')
 
-Project.where(:title_short => "trains").update_all( tags: 'info_viz, tui', toolbox_ids: 'mysql, python, scipy', skills:'spacial data analysis, data visualization')
+Project.where(:title_short => "trains").update_all( tags: 'info_viz', toolbox_ids: 'mysql, python, scipy', skills:'spacial data analysis, data visualization')
 
 Project.where(:title_short => "sfgraffitti").update_all( tags: 'info_viz', toolbox_ids: 'tablau', skills:'data analysis, data visualization')
 
 Project.where(:title_short => "india").update_all(tags: 'info_viz',  toolbox_ids: 'd3, html+css, javascript, tablau', skills:'data analysis, data visualization, user testing', role:'exploratory data analysis, creation of d3 and highcharts visualizations, user testing')
 
-Project.where(:title_short => "tubestrends").update_all(tags: 'dbs',  toolbox_ids: 'mongo db, mysql, amazon ec2, shell scripting, ruby, python, map reduce', skills:'automation engineering, server admininstration, ETL pipline creation, data management')
+Project.where(:title_short => "tubestrends").update_all(tags: 'dbs',  toolbox_ids: 'mongo db, mysql, amazon ec2, shell scripting, ruby, python, mapreduce', skills:'automation engineering, server admininstration, ETL pipline creation, data management')
 
 Project.where(:title_short => "caceo").update_all( tags: 'web_dev',  toolbox_ids: 'ruby on rails, html+css, mysql, jquery+ajax', skills:'contextual interviewing, data engineering, product design, web development')
 
