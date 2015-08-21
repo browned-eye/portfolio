@@ -3,56 +3,61 @@
         "header": "Breath, Sync, Balance",
         "image": "meeglo1.png",
         "type": "image",
-        "desc": "This project is under construction, check back in the next few days. "
+        "desc": "Muddling through stressful times is part of being human. Life can feel like an overwhelming maze of challenges that can lead one to feel unfocused, overwhelmed, anxious or depressed. <br><br>The first step in staying calm under stress is relaxing one’s mind and body so that he or she can can think clearly and navigate through the challenges that surround them.<br><br> Taking big, deep breaths can help a person relax. We’re often told that deep breathing works, but few us know how to do it effectively. <br><br>Meeglo is a tangible device that makes the user conscious of their breathing and helps them learn how deep breathe. By focusing on their breath, the user can give thier mind and emotions a much needed break."
     },
 
     {
         "header": "Meeglo Senses Your Heart Rate and Glows as It Changes",
         "image": "meeglobreathing.png",
         "type": "image",
-        "desc":" It’s a tool for heart-centered breathing, so you can learn to match your heart to your breath and balance your mind."
-    },
+        "desc":"Meeglo is a tool for heart-focused breathing, which has calming effect on the mind and the body. It reads the user's heart rate and changes color as it goes up and down, so that they can see how their heart changes with your breath. The goal is for the user to get their heart rate to rise as they inhale, and go down as they exhale- causing Meeglo to turn red as they inhale, and blue as the exhale.<br><br> With slow, deep breathing, the user can synchronize their heart’s patterns to their breath. This state of coherence—when their respiratory, cardiovascular and nervous systems are in sync—is much more than a state of calm. It's a dynamic balance in one’s brain that shifts him or her out of the physiology of stress. It’s also a way to increase one’s Heart Rate Variability (HRV), which is correlated with better stress response and performance."
 
+     },
     {
         "header": "Intial Prototype",
         "image": "meegloproto1.png",
         "type": "image",
-        "desc":""
+        "desc":"For our first prototype, we wanted Meeglo to feel good for the user to hold and have a shape that would lead the user to intuitively put their finger over the heart rate sensor."
     },
     {
         "header": "Contextual Interviews and User Testing",
         "image": "meeglobizfair.jpg",
         "type": "image",
-        "desc":""
+        "desc":"My project teammates and I felt Meeglo had the potential to solve a real problem: the device could help a person find calm and help them learn how to do deep breathing. However, we weren’t sure who our potential user base was or what situations users would want to use Meeglo in. <br><br>To find this out, we went around Berkeley, CA and conducted over 45 interviews. We asked people if they practiced meditation, how often they practiced, if they had tried to learn and/or failed, about stress triggers, and to explain the various ways that they coped with stress. <br><br>After a short interview, we gave the interviewee Meeglo, asked them to use the device for about three minutes and then asked them to talk about their experience."
     },
 
     {
         "header": "Affinity Diagramming",
         "image": "meegloaff.png",
-        "type": "image"
+        "type": "image",
+        "desc": "Using our user interviews, we made affinity diagram our interviews to gain insights. We learned that there were three main user groups who felt that they could benefit from using Meeglo:<br><br>1. Users want to use Meeglo to help get through anxiety, panic, depression and trauma issues. <br><br>2. Users want to use Meeglo to take a break from stressful work tasks and clear their minds before starting another task.<br><br>3. Users wanted to use Meeglo as meditation training device and tool to learn deep breathing."
     },
 
     {
         "header": "Iterative Prototype",
         "image": "meegloproto2.jpg",
-        "type": "image"
+        "type": "image",
+        "desc": "From user testing, we learned that many users didn’t find a round sphere shape compelling; the shape reminded them of a toy or paper weight. <br><br> In our second iteration, we were inspired by the healing properties of crystals and gem stones. We added SD card logging capabilities to record the time and date that a user uses Meeglo and their heart rate during these sessions. We added a timer to Meeglo that provides the user with haptic feedback to signal the start and end of a specific time duration, so the user has a sense as to how long they should should use Meeglo. <br><br> We’re also currently working on features that will guide users in deep breathing exercises, with the goal of helping the user learn how to deep breathe. "
     },
     {
         "header": "Iterative User Testing",
         "image": "meeglo_usertest.png",
-        "type": "image"
+        "type": "image",
+        "desc":"Since completing the second iteration of our prototypes, we managed to conduct about 35 more user interviews and tests. We’ve used guerilla ux testing methods, such as walking into a coffeeshop and offering to buy someone coffee inexchange for conducting an interview and testing Meeglo. <br><br>From this most recent round of user testing, we've learned some things about how users interact with Meeglo that we did not initially consider. For instance, we learned that women tended to prefer our crystal shaped prototype, while men prefered our geode shape prototype. This insight is helping guide our next prototype iteration:  Do women prefer the crystal shape because they have smaller hands? Does gender/hand size effect the experience with Meeglo? So far, we suspect that women like the smaller crystal shape Meeglo because of they have smaller hand size than men. <br><br> Another key insight that we learned was by watching users interact with Meeglo. Several users, covered the light (only on one side of the device) with their hand when then initially picked up the device. This maybe because they were left handed. To confirm this, we’re doing more testing to see if there difference in the user experience between right handed and left handed people and prototype."
     },
     {
-        "header": "Product Development",
+        "header": "Product Design",
         "image": "meeglobizcard.jpg",
-        "type": "image"
+        "type": "image",
+        "desc": "Working on Meeglo has taught me a lot about product design. On this project, I've been challenged to identify, investigate, and validatea problem, and then design, test and ship a usable solution.<br><br>My teammates and I are trying develop the foundation that sucess of Meeglo depends. We've thought long and hard about how to communicate the benefits that Meeglo can offer users and are beginning the process of promoting Meeglo on the web and on various social networking platforms. (This gave me the opportunity design and build a <a href='http://meeglo.net/'>product website</a> that's a simple sintra app that takes user mailinglist signups and dumps them into a mongodb)<br><br> While working to market Meeglo, I've simultaneous had to make sure that it can actually deliver the features and benefits that we are promising to users. This has meant meant working with my teammates and cordinating our skills to design a solution to many sub-problems, test those solutions, until the problem changes. <br><br> As we design Meeglo and solve one problem, we are confronted with a new set of problems and challenges. This project has taught me how to stay displined and attuned to the details, while at the same time, not losing track of the greater product vision of Meeglo that my teammates and I share."
     },
 
 
     {
         "header": "Reflections and Next Steps",
         "image": "dilbertallnew.png",
-        "type": "image"
+        "type": "image",
+        "desc": "There are a lot of directions that Meeglo could go. Our team plans conducting more user interviews and user testing and then iteratively prototyping based on the things we learn. <br><br>In a few iterations from now, we hope to present and visualize the data we’re collecting (time and date of when a user uses Meeglo and their heart rate data) in a compelling way. We’re also curious to see how we can combine this data with mood tracking (a way for users to record their daily emotional moods) so that we can provide users with clearer picture of their overall wellness levels. We most likely will be making a companion cellphone app to achieve this. <br><br>Stay tuned for our progress on this project by perodically checking the <a href=”http://meeglo.net/”>Meeglo website!</a>"
     }
 
 
