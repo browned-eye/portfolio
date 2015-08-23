@@ -4,6 +4,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'mysql2'
 require 'pluck_to_hash'
+require 'friendly_id'
 
 class Portfolio < Sinatra::Application
   enable :sessions

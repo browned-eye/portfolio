@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150725023700) do
+ActiveRecord::Schema.define(version: 20150823032834) do
 
   create_table "project_types", force: :cascade do |t|
     t.string "name", limit: 255
@@ -35,7 +35,10 @@ ActiveRecord::Schema.define(version: 20150725023700) do
     t.string  "github",      limit: 255
     t.string  "website",     limit: 255
     t.string  "report",      limit: 255
+    t.string  "slug",        limit: 255
   end
+
+  add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true, using: :btree
 
   create_table "toolboxes", force: :cascade do |t|
     t.string "name", limit: 255

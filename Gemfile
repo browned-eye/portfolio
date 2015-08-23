@@ -20,3 +20,4 @@ gem 'pg', platform: :mri_19, group: :production
 gem 'mysql2'
 gem 'pluck_to_hash'
 gem 'smarter_csv'
+gem 'friendly_id', '~> 5.1.0'

@@ -11,7 +11,8 @@ class Portfolio < Sinatra::Application
   end
 
   get '/projects/:id' do
-    @project = Project.find(params[:id])
+    #@project = Project.find(params[:id])
+    @project = Project.find_by_slug(params[:id])
     # unless @project[:toolbox_ids].nil?
     #   @project.tools = @project[:toolbox_ids].join(", ")
     # end

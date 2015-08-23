@@ -29,7 +29,7 @@ Toolbox.create( name:"d3")
 Toolbox.create( name:"amazon ec2")
 Toolbox.create( name:"shell scripting")
 Toolbox.create( name:"elasticsearch")
-Toolbox.create( name:"tablau")
+Toolbox.create( name:"tableau")
 Toolbox.create( name:"javascript")
 
 
@@ -38,6 +38,7 @@ Project.delete_all
 csvfile = File.dirname(__FILE__) + "/portfolio_projects.csv"
 csv = SmarterCSV.process(csvfile) do |line|
   Project.create!(line)
+  Project.where(:title => '').destroy_all
 end
 
 

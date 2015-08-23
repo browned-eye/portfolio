@@ -3,6 +3,15 @@ class ProjectType < ActiveRecord::Base
 end
 
 class Project < ActiveRecord::Base
+    extend FriendlyId
+    friendly_id :title, use: :slugged
+
+
+ # validates_presence_of :slug
+
+  def to_param
+    slug
+  end
   # attr_accessor :tools_arry
   # attr_accessor :skills_arry
   # attr_accessor :role_arry
