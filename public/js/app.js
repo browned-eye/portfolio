@@ -1,5 +1,5 @@
 // Declare app level module which depends on filters, and services
-angular.module('portfolio', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date', 'ngAnimate', 'keyboard', 'youtube-embed', 'ngSanitize'])
+angular.module('portfolio', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date', 'ngAnimate', 'keyboard', 'youtube-embed', 'ngSanitize', 'matchMedia'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {

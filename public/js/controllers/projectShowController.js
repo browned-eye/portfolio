@@ -1,7 +1,7 @@
 //http://rabidgadfly.com/page/2/
 
 angular.module('portfolio')
-    .controller('ProjectShowController', ['$scope', '$routeParams', '$anchorScroll','Project', 'DataSource', function($scope, $routeParams, $anchorScroll, Project, DataSource) {
+    .controller('ProjectShowController', ['$scope', '$routeParams', '$anchorScroll', 'Project', 'DataSource', 'screenSize', function($scope, $routeParams, $anchorScroll, Project, DataSource, screenSize) {
         //$scope.project = Project.get({ id: $routeParams.id});
 
 
@@ -11,7 +11,7 @@ angular.module('portfolio')
             $scope.title_short = data.title_short;
             $scope.IMAGE_LOCATION = "images/projectpics/" + data.title_short + "/";
             // Retrieve and set data
-            DataSource.get("images/projectpics/"+$scope.title_short +"/" + $scope.title_short + ".json", function(data) {
+            DataSource.get("images/projectpics/" + $scope.title_short + "/" + $scope.title_short + ".json", function(data) {
                 $scope.galleryData = data;
                 $scope.selected = data[0];
                 $scope.glen = data.length;
@@ -27,7 +27,17 @@ angular.module('portfolio')
 
         });
         $scope.vidPlayer = "galleryPlayer";
-        var IMAGE_WIDTH = 650;
+
+
+        if (screenSize.is('xs')) {
+            var IMAGE_WIDTH = 250;
+        }
+        else {
+            var IMAGE_WIDTH = 650;
+        }
+
+
+
 
         // Scroll to appropriate position based on image index and width
         $scope.scrollTo = function(image, ind) {
@@ -52,7 +62,11 @@ angular.module('portfolio')
         $scope.keys.push({
             code: 37,
             action: function() {
-                var IMAGE_WIDTH = 650;
+                if (screenSize.is('xs')) {
+                    var IMAGE_WIDTH = 250;
+                } else {
+                    var IMAGE_WIDTH = 650;
+                }
                 if ($scope.focusIndex > 0) {
                     $scope.focusIndex--;
                     $scope.listposition = {
@@ -69,7 +83,12 @@ angular.module('portfolio')
                 // console.log("right key pressed");
                 // console.log($scope.focusIndex);
 
-                var IMAGE_WIDTH = 650;
+                // var IMAGE_WIDTH = 650;
+                if (screenSize.is('xs')) {
+                    var IMAGE_WIDTH = 250;
+                } else {
+                    var IMAGE_WIDTH = 650;
+                }
                 // console.log($scope.focusIndex);
                 // if ($scope.focusIndex == -1) {
                 //   console.log("scope index -1");

@@ -1,5 +1,5 @@
 angular.module('portfolio')
-    .controller('ProjectIndexController', ['$scope', '$location', '$anchorScroll', '$routeParams', 'Project', function($scope, $location, $anchorScroll, $routeParams, Project) {
+    .controller('ProjectIndexController', ['$scope', '$location', '$anchorScroll', '$routeParams', 'Project', 'screenSize', function($scope, $location, $anchorScroll, $routeParams, Project, screenSize) {
 
         $scope.home = false;
         //get the project types
@@ -35,8 +35,15 @@ angular.module('portfolio')
         }];
         // pagination! piping the filters hellah times for the win!!!!
         $scope.currentPage = 1;
-        $scope.itemsPerPage = 9;
-
+        if (screenSize.is('xs')) {
+            $scope.itemsPerPage = 5;
+        }
+        else if (screenSize.is('sm')) {
+            $scope.itemsPerPage = 9;
+        }
+        else {
+            $scope.itemsPerPage = 9;
+        }
 
     }]);
 

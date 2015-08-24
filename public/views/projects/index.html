@@ -4,28 +4,28 @@
 <!-- this section will only show up on the home page -->
 <div id="scroller" sscroll-spy="" data-target="#scrolly" data-scroll-offset="70">
   <div id="home">
-    <div class="row homehead">
-      <div class="col-sm-3 landingImg"></div>
-      <div class="col-sm-9 landingText">
+    <div class="row col-xs-12 homehead">
+      <div class="col-xs-12 col-sm-3 landingImg"></div>
+      <div class="col-xs-12 col-sm-9 landingText">
         <!-- <div class="landingHead"> Hi. I'm <span style="color:#7B2932">Janine Heiser</span>, a <span style="color:#0084B3">full stack developer</span>  and <span style="color:#E08C50"> data analyst </span> with an interest in <span style="color:#3D745B">interaction design. </div> -->
             <div class="landingHead"> Hi. I'm Janine Heiser, a full stack developer and data analyst with an interest in interaction design. </div>
       </div>
     </div>
   </div>
-  <div id="projects" class="row"><hr></div>
+  <div id="projects" class="row col-xs-12"><hr></div>
   <!-- this section will only show up on the home page -->
   <div class="row projectsrow projectTop">
-    <div class="col-sm-3 projcats">
+    <div class="col-xs-6 col-sm-3 projcats">
       <div class="filtercathead">CATEGORIES</div>
         <pto-category-selector ng-model="search.category"></pto-category-selector>
       <div class="filtercathead">TOOLS</div>
         <pto-toolbox-selector ng-model="search.tool"></pto-toolbox-selector>
       </div>
-    <div class="col-sm-9 projectsdisp">
+    <div class="col-xs-6 col-sm-9 projectsdisp">
     <!-- angular piping filters are awesome!!! this would be hell otherwise! -->
       <div ng-repeat="project in myprojects = ( filtered =  ( projects | categoryFilter:search.category | toolFilter:search.tool  | categoryFilter:stuff) | startFrom:(currentPage-1)*itemsPerPage | limitTo:itemsPerPage) track by $index" ng-if="$index % 3 == 0" class="row projectsrow">
       <!-- first item -->
-        <div class="col-xs-4 projectcard">
+        <div class="col-xs-12 col-sm-4 projectcard">
           <a class="projectLink" href="#/projects/{{myprojects[$index].slug}}">
             <div class="projectThumbImg">
             <div back-img="images/projectpics/{{myprojects[$index].title_short}}/{{myprojects[$index].thumb}}" hideonhoverparent></div>
@@ -39,7 +39,7 @@
           </a>
         </div>
         <!-- second item -->
-        <div ng-if="myprojects[$index+1]" class="col-xs-4 projectcard">
+        <div ng-if="myprojects[$index+1]" class="col-xs-12 col-sm-4 projectcard">
           <a class="projectLink" href="#/projects/{{myprojects[$index+1].slug}}">
             <div class="projectThumbImg">
               <div hideonhoverparent back-img="images/projectpics/{{myprojects[$index+1].title_short}}/{{myprojects[$index+1].thumb}}"></div>
@@ -53,7 +53,7 @@
           </a>
         </div>
         <!-- Third item -->
-        <div ng-if="myprojects[$index+2]" class="col-xs-4 projectcard">
+        <div ng-if="myprojects[$index+2]" class="col-xs-12 col-sm-4 projectcard">
           <a class="projectLink" href="#/projects/{{myprojects[$index+2].slug}}">
             <div class="projectThumbImg">
               <div back-img="images/projectpics/{{myprojects[$index+2].title_short}}/{{myprojects[$index+2].thumb}}" hideonhoverparent></div>
@@ -70,111 +70,116 @@
     </div>
   </div>
   <div class="row mypag">
-    <pagination  page="currentPage" total-items="filtered.length" items-per-page="itemsPerPage" on-select-page="setPage(page)"></pagination>
+      <pagination  page="currentPage" total-items="filtered.length" items-per-page="itemsPerPage" on-select-page="setPage(page)"></pagination>
+  </div>
  </div>
   <!--************EXPERIENCE SECTION***************************-->
-  <div id="experience" class="row"><hr></div>
-  <div class="row resumeFull"> <a href="/images/singlepage/janineheiser_resume.pdf" download="janineheiser_resume">Download Full Resume</a></div>
-  <div class="row resumeHead">PROFESSIONAL EXPERIENCE</div>
+  <div id="experience" class="row col-xs-12"><hr></div>
+  <div class="row col-xs-12 resumeFull"> <a href="/images/singlepage/janineheiser_resume.pdf" download="janineheiser_resume">Download Full Resume</a></div>
+  <div class="row col-xs-12 resumeHead">PROFESSIONAL EXPERIENCE</div>
   <div class="myjobs">
   <!-- first job -->
-    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed = !isCollapsed" >WEB DEVELOPER, Bancroft Library, Summer 2014 and Spring 2015, UC Berkeley</a> </div>
+    <div class="row col-xs-12 resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed = !isCollapsed" >FULL-STACK SOFTWARE ENGINEER, Bancroft Library, Summer 2014 and Spring 2015, UC Berkeley</a> </div>
     <div class="resumeJobItemContainer" collapse="isCollapsed">
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
           + Created a fully functional, Ruby on Rails web application that utilized a variety of existing natural
           language processing algorithms and libraries.
       </div>
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
           + The web application enables researchers and archivists to extract meaningful semantic topics andnamed entities from a given digital archival collection.
       </div>
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
         + Awarded a Bancroft Digital Archive Fellowship in Spring of 2015 to further develop the project that was started during the Summer of 2014.
        </div>
     </div>
     <!-- second job -->
-    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed2 = !isCollapsed2">SYSTEMS ADMINISTRATOR, July 2013-December 2014, UC Berkeley School of Law, Statewide Database Project </a></div>
+    <div class="row col-xs-12 resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed2 = !isCollapsed2">SYSTEMS ADMINISTRATOR, July 2013-December 2014, UC Berkeley School of Law, Statewide Database Project </a></div>
     <div class="resumeJobItemContainer" collapse="isCollapsed2">
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
          + Administered the Statewide Database's web servers; tasks included administering dev/QA/production websites, database
           systems, managing user accounts and file systems.
       </div>
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
          + Wrote and administered automated scripts that ensured the integrity and availability of Statewide Database's datasets to the
           public and other stakeholders.
       </div>
     </div>
     <!-- third job -->
-    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed3 = !isCollapsed3">QUALITY ASSURANCE ENGINEER, December 2012-September 2013, INgrooves Fontana, San Francisco, CA </a></div>
+    <div class="row col-xs-12 resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed3 = !isCollapsed3">QUALITY ASSURANCE ENGINEER, December 2012-September 2013, INgrooves Fontana, San Francisco, CA </a></div>
     <div class="resumeJobItemContainer" collapse="isCollapsed3">
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
          + Created and implemented automated testing software written python to test new accounting software features and
           functionality; identified, isolated, logged and tracked software defects, bugs and errors and added to test case libraries.
       </div>
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
          + Optimized SQL queries that queried application database tables as required; tables contained up to 324 million records of
            transactional data.
       </div>
     </div>
     <!--fourth job -->
-    <div class="row resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed4 = !isCollapsed4">DATA ANALYST, August 2007-November 2012, Democratic National Committee, Technology Department, National Voter Database Project, Washington, DC and San Francisco, CA </a></div>
+    <div class="row col-xs-12 resumeJobHead"><a href="" class="resumeclick" ng-click="isCollapsed4 = !isCollapsed4">DATA ANALYST, August 2007-November 2012, Democratic National Committee, Technology Department, National Voter Database Project, Washington, DC and San Francisco, CA </a></div>
     <div class="resumeJobItemContainer" collapse="isCollapsed4">
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
          + Helped develop and maintain the data infrastructure and provided quality assurance for the Democratic Party’s online voter data management tool, Voter Activation Network (VAN), used by the Obama For America Campaign, and democratic candidates to organize and mobilize voters. (http://www.ngpvan.com/smartvan)
       </div>
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
          + Assisted in developing and maintaining Java-based ETL database tools and processes to cleanse, standardize and manage several terabytes of data from public and private sources about voters and voting districts.
       </div>
-      <div class="row resumeJobItem">
+      <div class="row col-xs-12 resumeJobItem">
         + Planned, designed, and developed automated scripts, stored procedures, and database queries for auditing voter data for quality assurance.
       </div>
     </div>
   </div>
-  <div class="row extraSkillz">
-    <div class="col-xs-6">
+  <div class="row col-sm-12 extraSkillz">
+    <div class="col-sm-6 col-xs-12">
       <div class="row resumeItemsHead">TECHNICAL SKILLS </div>
       <div class="row resumeitems"><div>PROGRAMMING</div><div class="resumeskillsContainer">python, ruby, bash scripting</div></a></div>
-     <div class="row resumeitems"><div>WEB</div><div class="resumeskillsContainer"> ruby on rails, javascript, jQuery + ajax,  HTML+CSS, angular.js, node.js, php, sinatra, flask, nginx and apache webserver administration</div></a></div>
+      <div class="row resumeitems"><div>WEB</div><div class="resumeskillsContainer"> ruby on rails, javascript, jQuery + ajax,  HTML+CSS, angular.js, node.js, php, sinatra, flask, nginx and apache webserver administration</div></a></div>
       <div class="row resumeitems"><div>DBMS</div><div class="resumeskillsContainer"> highly skilled in database design, administration and query optimization; familiarity with mapreduce concepts and nosql dbs like mongodb and sparkdb</div></a></div>
       <div class="row resumeitems"><div>DATA ANALYSIS AND VISUALIZATION</div><div class="resumeskillsContainer"> d3, highcharts, tableau, scipy, pandas, R </div></a></div>
     </div>
-    <div class="col-xs-6">
-      <div class="row resumeItemsHead">EDUCATION </div>
-      <div class="row resumeitems">UC BERKELEY, Berkeley, CA, Masters in Information Management and Systems, May 2015</div>
+    <div class="col-sm-6 col-xs-12">
+      <div class="row  resumeItemsHead">EDUCATION </div>
+      <div class="row  resumeitems">UC BERKELEY, Berkeley, CA, Masters in Information Management and Systems, May 2015</div>
           <div class="row resumeitemsplus"><span style="padding-right:1%">+</span> Focus areas: user-centered interaction design, web development, data analysis, information visualization and organization</div>
-        </div>
       <div class="row resumeitems">OBERLIN COLLEGE, Oberlin, OH, BA with high honors</div>
     </div>
   </div>
 
 
   <!--************ABOUT SECTION***************************-->
-  <div id="about" class="row"><hr></div>
-  <div class="row meAboutHead"> ABOUT </div>
-  <div class="row meAboutContainer">
-    <div class="meAbout col-xs-6">
-      <div back-img="images/singlepage/me.jpg"></div>
+  <div id="about" class="row col-xs-12"><hr></div>
+  <div class="row col-xs-12 meAboutHead">ABOUT</div>
+  <!-- <div class="meAboutContainer"> -->
+  <div class="row col-xs-12">
+    <div class="col-sm-6 col-xs-12 meAbouthalf">
+      <div class="row meAbout">
+        <div back-img="images/singlepage/me.jpg"></div>
+      </div>
     </div>
-    <div class="meAboutText col-xs-6">
-      I'm a San Francisco Bay Area full-stack developer and data analyst with specialties in user research and interaction design. <br><br>
-      Originally a self-taught programmer, I recently had the opportunity to go back to school at the UC Berkeley School of Information to learn best practices for data management and user experience design.
-      My work and educational experiences have taught me that good information organization complements usability.<br><br>
-      I'm seeking to work in collaborative work environment; I love to share ideas, learn from others and be part of a team.
-      </br></br>
-      I also like to hike, travel, and go swimming.
+    <div class="col-sm-6 col-xs-12">
+      <div class="row meAboutText">
+        I'm a San Francisco Bay Area full-stack developer and data analyst with specialties in user research and interaction design. <br><br>
+        Originally a self-taught programmer, I recently had the opportunity to go back to school at the UC Berkeley School of Information to learn best practices for data management and user experience design.
+        My work and educational experiences have taught me that good information organization complements usability.<br><br>
+        I'm seeking to work in collaborative work environment; I love to share ideas, learn from others and be part of a team.
+        </br></br>
+        I also like to hike, travel, and go swimming.
+      </div>
     </div>
   </div>
 
   <!--************CONTACT SECTION***************************-->
   <div id="contact" class="row"><hr></div>
-  <div class="row meAboutHead">HIRE ME</div>
-  <div class="row contactpitch">
+  <div class="row col-xs-12 meAboutHead">HIRE ME</div>
+  <div class="row col-xs-12 contactpitch">
     I'm currently looking for a full time position in SF Bay Area.
   </div>
-  <div class="row contactpitchtext">
+  <div class="row col-xs-12 contactpitchtext">
       Think I might be a good fit for your team?  You should totally hire me.  Shoot me an email to set up a chat!
   </div>
-  <div class="row contactcontainer">
-    <div class="col-xs-6 contactItemContainer">
+  <div class="row col-xs-12 contactcontainer">
+    <div class="col-sm-6 col-xs-12 contactItemContainer">
       <div ng-repeat="item in contactItems">
         <div class="row contactitem">
           <div class="col-xs-3 contactThumb">
@@ -184,14 +189,14 @@
         </div>
       </div>
     </div>
-    <div class="meAbout col-xs-6">
+    <div class="meAbout2 col-sm-6 col-xs-12">
       <div back-img="images/singlepage/meandchichi.jpg"></div>
     </div>
   </div>
 
 
 <!-- ******footer section -->
-  <div class="footer row"><hr></div>
-  <div  class="row text-muted"><a href="https://github.com/j9recurses/portfolio">Copyright © Janine Heiser 2015</a></div>
+  <div class="footer row col-xs-12"><hr></div>
+  <div  class="row col-xs-12 text-muted"><a href="https://github.com/j9recurses/portfolio">Copyright © Janine Heiser 2015</a></div>
 </div>
 

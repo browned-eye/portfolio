@@ -91,17 +91,13 @@ hr {
 .projectTop{
   padding-top:2%;
 }
+
 .filtercathead {
-  font-size: 150%;
+ /* font-size: 150%;*/
   font-weight: bold;
   padding-bottom:1%;
 }
-.projcats {
-  padding-bottom: 1000px;
-  margin-bottom: -1000px;
-  height: 100%;
-  color: #615652;
-}
+
 
 a.toolitem {
   color: #615652;
@@ -109,8 +105,8 @@ a.toolitem {
 
 /***project card styles***/
 .projectsdisp {
-  padding-bottom: 1000px;
-  margin-bottom: -1000px;
+ /* padding-bottom: 1000px;
+  margin-bottom: -1000px;*/
   height: 100%;
 }
 
@@ -118,22 +114,19 @@ a.toolitem {
   float: left;
 }
 
-.projectThumbImg {
-  height: 200px;
-  width: 225px;
-  opacity: 0.7;
-  filter: alpha(opacity=70);
-  position: relative;
+.projcats {
+ /* padding-bottom: 1000px;
+  margin-bottom: -1000px;*/
+  height: auto;
+  color: #615652;
 }
+
 /*back-img will inherit the height and width whatever div its inside*/
 /*Need to place this in a div with width and height so the img div will have an actual size*/
 div[back-img] {
   width: 90%;
   height: 90%;
 }
-
-
-
 
 .projectThumbImg:hover {
   opacity: 1.0;
@@ -183,6 +176,11 @@ a.projectLink {
   padding-left:53%;
   margin-top:-2%;
 }
+
+
+
+
+
 /******************project show page styles*************************/
 .showpg{
   margin-bottom:-2.5%;
@@ -311,7 +309,6 @@ div[back-img-big] {
  height:100%;
   display:block;
   font-size:125%;
-
 }
 /******************experience page styles*************************/
 #experience{
@@ -340,16 +337,18 @@ div[back-img-big] {
   font-size:135%;
   margin:0.25%;
   padding-left:2%;
+  padding-bottom:1%;
+  padding-top:1%;
   display:block;
   padding-right:10%;
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 
 .resumeItemsHead{
   font-size:180%;
   padding-bottom:1%;
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 .resumeitems{
@@ -379,7 +378,7 @@ div[back-img-big] {
 
 .itemResumeHead{
   font-size:140%;
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 
@@ -389,7 +388,7 @@ div[back-img-big] {
  padding-top:2%;
   display:block;
  padding-right:10%;
- text-align: justify;
+ /*text-align: justify;*/
 }
 
 
@@ -418,35 +417,29 @@ a.resumeclick:active{
   padding-top:2%;
 }
 
-.meAbout{
-  width:400px;
-  height:500px;
- margin-top:-4%;
-  margin-left:-1.75%;
-/*  padding-left:5%;*/
- /* margin-bottom:-6%;*/
-}
+
+
+
+
 
 .meAbout2{
-  width:500px;
-  height:600px;
-  margin-top:-6.75%;
-  margin-left:-7.75%;
+  width:400px;
+  height:500px;
+  margin-top:-4%;
+  margin-left:-1.75%;
 /*  padding-left:5%;*/
- /* margin-bottom:-6%;*/
+  margin-bottom:-6%;
 }
 
+
 .meAboutText{
-  padding-top:2%;
+ /* padding-top:2%;*/
   font-size:170%;
-  margin-right:-2%;
-  margin-left:-1%;
+ /* margin-right:-2%;
+  margin-left:-1%;*/
   display:block;
 }
-.meAboutContainer{
-/*  margin-bottom:20%;*/
- padding-bottom:5%;
-}
+
 
 /*********Contact Section*******/
 .contactpitch{
@@ -459,19 +452,13 @@ a.resumeclick:active{
   font-size:180%;
 }
 .contactcontainer{
-  font-size:180%;
+  font-size:150%;
   padding-top:1%;
   padding-bottom:3%;
 }
 
-.contactItemContainer{
-  /*padding-left:8%;*/
-  padding-top:3%;
-  padding-right:-10%;
 
-}
-.contactitem{
-}
+
 .contactThumb{
   width:80px;
   height:80px;
@@ -489,4 +476,391 @@ a.resumeclick:active{
 
 .text-muted{
   padding-bottom:2%;
+}
+
+/************Mobile Styles***************/
+
+@media (min-width: 320px) and (max-width: 360px) {
+  .projectcard{
+    padding-bottom:1%;
+  }
+  .projectThumbImg {
+    height: 110px;
+    width: 135px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: relative;
+  }
+
+  .toolitem{
+    font-size:80%;
+  }
+
+  .projectTaglineHead{
+    font-size:10px;
+    margin-bottom:100px;
+    padding-bottom:100px;
+  }
+
+  .projectTaglineText{
+      font-size:2px;
+  }
+
+  .landingHead{
+    font-size:250%;
+    padding-bottom:3%;
+    padding-left:5%;
+  }
+
+  .mypag{
+    width:100%;
+    padding-left:31%;
+    margin-top:-2%;
+  }
+
+
+  .large {
+    width: 250px;
+    height:150px;
+  }
+  .mainimageshell {
+    float: left;
+    /* display:block;*/
+    width: 270px;
+    /*  padding: 0px;
+    padding-bottom:4%;*/
+  }
+  .viewwindow {
+    width: 250px;
+    height: 175px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .resumeHead{
+    font-size:250%;
+    padding-top:3%;
+    padding-bottom:1%;
+  }
+
+  .resumeFull{
+    padding-top:2.2%;
+    margin-bottom:1%;
+    font-size:115%;
+  }
+
+  .resumeJobItem{
+    font-size:100%;
+    margin:0.25%;
+    padding:2%;
+    /*padding-left:2%;*/
+    display:block;
+    padding-right:10%;
+  }
+
+  .resumeItemsHead{
+    font-size:160%;
+    padding-top:1%;
+    padding-bottom:3%;
+  }
+
+  .resumeitems{
+    font-size:120%;
+    padding-bottom:3.5%;
+    display:block;
+    margin-right:4%;
+    padding-right:8%;
+  }
+  .resumeskillsContainer{
+    font-size:85%;
+    padding-top:0.25%;
+  }
+  .resumeitemsplus{
+    font-size:100%;
+    padding-bottom:4%;
+    /*margin-top:-2.5%;*/
+    display:block;
+    padding-top:1%;
+    font-size:100%;
+    padding-left:4%;
+    margin-right:7%;
+  }
+
+  .itemResumeHead{
+    font-size:140%;
+  }
+
+
+  .resumeJobHead{
+    font-size:140%;
+    padding-bottom:3%;
+    padding-top:3%;
+    display:block;
+    padding-right:10%;
+  }
+
+
+  .meAbout{
+    width:200px;
+    height:225px;
+    margin-left:-4.75%;
+    margin-bottom:-5%;
+    margin-top:-4%;
+  }
+
+  .meAboutText{
+    font-size:140%;
+    display:block;
+    padding-bottom:2%;
+  }
+
+  .meAboutHead{
+    font-size:250%;
+    padding-top:2%;
+    padding-bottom:1%;
+  }
+
+  .contactpitch{
+    font-size:140%;
+    padding-top:2%;
+    padding-bottom:1%;
+  }
+
+  .contactpitchtext{
+    font-size:140%;
+    padding-top:2%;
+  }
+  .contactcontainer{
+    font-size:150%;
+    padding-top:1%;
+  }
+  .meAbout2{
+    width:300px;
+    height:275px;
+    margin-top:-8%;
+    margin-bottom:-10%;
+  }
+
+}
+
+/********small browswer styles******/
+@media (min-width: 768px) {
+
+  .projectThumbImg {
+    height: 165px;
+    width: 170px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: relative;
+  }
+
+  .projectTaglineHead{
+    font-size:140%;
+    padding-bottom:3%;
+  }
+
+  .projectTaglineText{
+    font-size:100%;
+  }
+
+  .meAbout{
+    width:350px;
+    height:450px;
+    margin-top:-9.5%;
+  /*  margin-left:-4.25%;*/
+  }
+  .meAboutText{
+    padding-top:5%;
+    font-size:140%;
+    display:block;
+    padding-bottom:3%;
+  }
+   .contactpitch{
+    font-size:160%;
+    padding-top:2%;
+  }
+
+  .contactpitchtext{
+    font-size:160%;
+  }
+  .contactcontainer{
+    font-size:170%;
+  }
+
+  .meAbout2{
+    width:350px;
+    height:300px;
+    padding-top:5%;
+  }
+
+}
+@media (min-width: 800px) {
+   .projectThumbImg {
+    height: 175px;
+    width: 190px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: relative;
+  }
+
+ .projectTaglineHead{
+    font-size:140%;
+    padding-bottom:3%;
+  }
+
+  .projectTaglineText{
+    font-size:110%;
+  }
+
+  .meAbout{
+    width:350px;
+    height:430px;
+    margin-top:-8%;
+    margin-left:-5%;
+  }
+  .meAboutText{
+    padding-top:2.25%;
+    font-size:160%;
+    display:block;
+    padding-bottom:5%;
+  }
+
+  .meAbout2{
+    width:355px;
+    height:325px;
+    padding-top:2.5%;
+  }
+
+  .contactcontainer{
+    font-size:160%;
+  }
+   .contactpitchtext{
+    font-size:160%;
+  }
+    .contactpitch{
+    font-size:160%;
+    padding-top:2%;
+  }
+
+
+}
+/*********medium sized browsers**********/
+@media (min-width: 980px) {
+  .projectThumbImg {
+    height: 175px;
+    width: 195px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: relative;
+  }
+   .projectTaglineHead{
+    font-size:140%;
+    padding-bottom:3%;
+  }
+
+  .projectTaglineText{
+    font-size:110%;
+  }
+
+  .meAbout{
+    width:360px;
+    height:440px;
+    margin-top:-8%;
+    margin-left:-5.5%;
+  }
+  .meAboutText{
+    padding-top:2.25%;
+    font-size:160%;
+    padding-left:2%;
+    display:block;
+    padding-bottom:6%;
+  }
+  .meAbout2{
+    width:355px;
+    height:335px;
+    padding-top:2%;
+  }
+
+  .contactcontainer{
+    font-size:160%;
+  }
+   .contactpitchtext{
+    font-size:160%;
+  }
+
+    .contactpitch{
+    font-size:160%;
+    padding-top:2%;
+  }
+
+}
+
+@media (min-width: 1080px) {
+.projectThumbImg {
+    height: 175px;
+    width: 195px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: relative;
+  }
+   .projectTaglineHead{
+    font-size:140%;
+    padding-bottom:3%;
+  }
+
+  .projectTaglineText{
+    font-size:110%;
+  }
+
+  .meAbout{
+    width:360px;
+    height:440px;
+    margin-top:-5%;
+    margin-left:-4%;
+  }
+  .meAboutText{
+    padding-top:3%;
+    font-size:160%;
+    display:block;
+    padding-bottom:6%;
+  }
+
+  .meAbouthalf{
+    margin-right:-10%;
+  }
+
+  .meAbout2{
+    width:355px;
+    height:335px;
+    padding-top:2%;
+  }
+
+  .contactcontainer{
+    font-size:160%;
+  }
+   .contactpitchtext{
+    font-size:160%;
+  }
+
+    .contactpitch{
+    font-size:160%;
+    padding-top:2%;
+  }
+}
+
+/**************larger browser sizes************/
+@media (min-width: 1280px) {
+  .projectThumbImg {
+    height: 225px;
+    width: 250px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: relative;
+  }
+
+   .meAbouthalf {
+    margin-right:-18%;
+  }
+
 }
